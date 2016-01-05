@@ -1,0 +1,209 @@
+// custom CSS for sound shapes manual
+$yellow: #d1b849;
+$ahead-font: 52px;
+$bhead-font: 40px;
+$img-border: 20px solid $yellow;
+$link-color: #d95952;
+$hover-color: #4b3a34;
+$tablet-screen: (1024px);
+@font-face {
+  font-family: 'roboto_slabbold';
+  src: url("https://cpt-assets.s3.amazonaws.com/projects/44/asset_images/237/RobotoSlab-Bold-webfont.eot");
+  src: url("https://cpt-assets.s3.amazonaws.com/projects/44/asset_images/237/RobotoSlab-Bold-webfont.eot?#iefix") format("embedded-opentype"), 
+       url("https://cpt-assets.s3.amazonaws.com/projects/44/asset_images/233/RobotoSlab-Bold-webfont.woff") format("woff"), 
+       url("https://cpt-assets.s3.amazonaws.com/projects/44/asset_images/234/RobotoSlab-Bold-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; 
+}
+@font-face {
+  font-family: 'noto_sansregular';
+  src: url("https://cpt-assets.s3.amazonaws.com/projects/44/asset_images/232/NotoSans-Regular-webfont.eot");
+  src: url("https://cpt-assets.s3.amazonaws.com/projects/44/asset_images/232/NotoSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), 
+       url("https://cpt-assets.s3.amazonaws.com/projects/44/asset_images/230/NotoSans-Regular-webfont.woff") format("woff"), 
+       url("https://cpt-assets.s3.amazonaws.com/projects/44/asset_images/231/NotoSans-Regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; 
+}
+@font-face {
+  font-family: 'noto_sansitalic';
+  src: url("https://cpt-assets.s3.amazonaws.com/projects/44/asset_images/789/NotoSans-Italic-webfont.eot");
+  src: url("https://cpt-assets.s3.amazonaws.com/projects/44/asset_images/789/NotoSans-Italic-webfont.eot?#iefix") format("embedded-opentype"), 
+       url("https://cpt-assets.s3.amazonaws.com/projects/44/asset_images/791/NotoSans-Italic-webfont.woff") format("woff"), 
+       url("https://cpt-assets.s3.amazonaws.com/projects/44/asset_images/793/NotoSans-Italic-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; 
+}
+@font-face {
+  font-family: 'noto_sansbold';
+  src: url("https://cpt-assets.s3.amazonaws.com/projects/44/asset_images/788/NotoSans-Bold-webfont.eot");
+  src: url("https://cpt-assets.s3.amazonaws.com/projects/44/asset_images/788/NotoSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), 
+       url("https://cpt-assets.s3.amazonaws.com/projects/44/asset_images/792/NotoSans-Bold-webfont.woff") format("woff"), 
+       url("https://cpt-assets.s3.amazonaws.com/projects/44/asset_images/790/NotoSans-Bold-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; 
+}
+@mixin font-family($weight) {
+  font-family: $weight, "sstregular", helvetica, arial !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+}
+@mixin rounded-corners {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+}
+body {
+  background:url('https://cpt-assets.s3.amazonaws.com/projects/44/asset_styles/227/style_bg.png') fixed 0 0;
+  color: white;
+  letter-spacing: -1;
+  @include font-family("noto_sansregular");
+}
+em, i {
+  @include font-family("noto_sansitalic");
+}
+strong {
+  @include font-family("noto_sansbold");
+}
+.chapter-header, h3 {
+  color: $yellow;
+  font-weight: bold;
+  text-transform: none;
+  @include font-family("roboto_slabbold");
+}
+.chapter-header {
+  font-size: $ahead-font;
+  background:url('https://cpt-assets.s3.amazonaws.com/projects/44/asset_styles/229/style_ahead_bg.png') no-repeat 0 5px;
+  padding-left: 60px;
+  margin-bottom: 0;
+  span {
+    line-height: 100%;
+  }
+}
+h3.bhead, .ch-4-pg-2 h2, .ch-4-pg-3 h2, .ch-5-pg-2 h2 {
+  font-size: $bhead-font;
+  background:url('https://cpt-assets.s3.amazonaws.com/projects/44/asset_styles/228/style_bhead_bg.png') no-repeat 0 0;
+  padding: 3px 0 0 60px;  
+  margin-bottom: 0;
+  height: 58px;
+}
+h2.page-header {
+  margin-top: 1em;
+}
+
+p.body-normal {
+  font-size: 24px;
+  margin: 0 2.5em;
+  margin-bottom: 1em;
+}
+.body-control-container {
+  margin: 0 3.5em;
+  span {
+    font-size: 20px;
+  }
+}
+.image-with-border, .modal-image-container {
+  margin: 1em auto; 
+  img { 
+    display: block;
+    @include rounded-corners;
+    border: $img-border;
+  }
+}
+.ch-2-pg-1-image-1 {
+  display: block;
+  margin: 2em auto;
+}
+.ch-8-pg-1 .body-normal {
+  font-size: 14px;
+}
+.ch-4-pg-2 {
+  h3, .body-image, p.body-normal {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+  }
+  h3 {
+    background: none !important;
+    padding-left: 0;
+  }
+  .body-image {
+    margin: 0 !important;
+  }
+}
+.tool-tip {
+  .ux-icon {
+    text-decoration: none !important;
+  }
+  .icon-small {
+    font-size: 1.3rem !important;
+  }
+  span:first-of-type {
+    margin-bottom: 0.25rem;
+    font-size: 1.4rem !important;
+  }
+  span~span {
+    color: #63b8ce;
+    &:hover {
+      color: $yellow !important;
+    }
+  }
+}
+
+/* Table of Contents */
+.side-toc, .side-toc-container {
+  @include font-family("roboto_slabbold");
+}
+.side-toc {
+  background:url('https://cpt-assets.s3.amazonaws.com/projects/44/asset_styles/238/style_toc_bg.png') no-repeat right top #efe2dd;
+  border-left: 20px;
+  -moz-border-image: url('https://cpt-assets.s3.amazonaws.com/projects/44/asset_styles/241/style_toc_border.png') 0 0 0 20;
+  -webkit-border-image: url('https://cpt-assets.s3.amazonaws.com/projects/44/asset_styles/241/style_toc_border.png') 0 0 0 20;
+  -o-border-image: url('https://cpt-assets.s3.amazonaws.com/projects/44/asset_styles/241/style_toc_border.png') 0 0 0 20;
+  border-image: url('https://cpt-assets.s3.amazonaws.com/projects/44/asset_styles/241/style_toc_border.png') 0 0 0 20;
+  top: 50px;
+  .toc-title {
+    color: $hover-color !important;
+    margin-left: 48px !important;
+    box-shadow: none;
+    letter-spacing: -1px;
+  }
+  .toc-item {
+    font-size: 33px;
+    margin-right: 0 !important;
+    padding: 0;
+    a {
+      margin-left: 0;
+      padding-left: 40px;
+      height: 48px;
+      color: $link-color !important;
+      &:hover, &:active, &.is-active {
+        background:url('https://cpt-assets.s3.amazonaws.com/projects/44/asset_styles/239/style_toc_hover.png') no-repeat 5px 7px #d1b849;
+        color: $hover-color !important;
+        text-shadow: none;
+      }
+    }
+  }
+  .hide-toc-link {
+    color: $link-color !important;
+  }
+}
+@media only screen and (max-width:$tablet-screen) {
+  .bhead {
+    padding-top: 10px !important;
+  }
+}
+@media only screen and (max-width:560px) {
+  p.body-normal, .body-control-container {
+    font-size: 20px !important;
+    margin: 0 !important;
+  }
+}
+@media only screen and (max-width:480px) {
+  .body-control-container {
+    border-color: #de746e;
+  }
+  .bhead {
+    margin: 1em 0 0 0;
+  }
+}

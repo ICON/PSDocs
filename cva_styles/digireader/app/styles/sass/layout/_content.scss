@@ -1,0 +1,225 @@
+/*
+* Content from the parser styling
+*/
+// Headings
+.chapter-header { //changing underscores to hyphens globally
+	@include scaled-header-font;
+	margin: 2rem 0;
+	padding: 0;
+	text-transform: uppercase;
+  line-height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  span {
+    display: inline;
+  }
+  @include user-select(none);
+}
+.page-title, .page-header {
+  font-size: $font-size-large;
+  line-height: 100%;
+  padding: 0;
+  margin: 1rem 0;
+  line-height: 100%;
+  @include user-select(none);
+}
+.body-head, .bhead {
+	font-size: $font-size-medium;
+  line-height: 100%;
+	padding: 0;
+  margin-bottom: 1rem;
+  line-height: 100%;
+  @include user-select(none);
+}
+// body content
+.body-normal {
+	font-size: $font-size-normal;
+	font-weight: normal;
+	padding: 0;
+	margin: 0 0 1rem 0;
+  @include user-select(none);
+}
+// game controller settings
+.body-control-container {
+	@include clearfix();
+  .body-control {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    margin: 0 0 1rem;
+    &:after {
+      content: "..................................................................................................................................................................................................................................................";
+      font-weight: normal;
+      overflow: hidden;
+      display: block;
+      height: 3rem;
+    }
+    dt, dd {
+      line-height: 100%;
+      margin: 0;
+      span, strong {
+        display: inline-block;
+      }
+    }
+  }
+  .body-control-title {
+    float: left;
+    
+  }
+  .body-control-action {
+    float: right;
+  }
+}
+// text links
+.body-hyperlink {
+	color: $light-blue;
+	text-decoration: underline;
+	font-weight: normal;
+	padding: 0;
+  &:hover, &:active, &:focus {
+    color: $dark-blue2;
+  }
+  @include user-select(none);
+}
+.table-head {
+	font-size: $font-size-medium;
+	font-weight: normal;
+	padding: 0 0 0 0;
+	margin: 0 0 4px 0;
+  @include user-select(none);
+}
+// includes new and old body table style for backwards compatibility
+.body-table, .body_table {
+	border: 0;
+	border-collapse: collapse;
+	margin: 0 auto 1rem;
+  @include user-select(none);
+	tr, th, td {
+		margin: 0;
+		border: 0;
+		vertical-align: top;
+	}
+  tr {
+    padding-top: 1rem;
+    &:nth-child(odd) td {
+      padding-bottom: 1rem;
+    }
+    &:nth-child(even) td {
+      padding-bottom: 0;
+    }
+  }
+	td {
+    &:nth-child(1) {
+      padding-right: 0.5rem;
+    }
+    &:nth-child(2) {
+      padding-left: 0.5rem; 
+    }
+    p {
+      margin-bottom: 0;
+    }
+    h3 {
+      margin: 0;
+    }
+	}
+}
+table~h3 {
+  margin: 0 0 0.5rem !important;
+}
+.body-image {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.image-left {
+	float: left;
+	margin-right: 10px;
+	max-width: 40%;
+	height: auto;
+}
+.image-right {
+	float: right;
+	margin-left: 10px;
+	max-width: 40%;
+	height: auto;
+}
+
+.callout-title {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+  @include user-select(none);
+}
+.callout-description {
+  font-size: $font-size-normal;
+  margin-top: 0;
+  @include user-select(none);
+}
+
+.grid .row {
+  margin: 1rem 0;
+  .columns .modal-image-container {
+      width: 100%;
+      margin: 0 !important;
+  }
+}
+
+// Media Queries overrides
+@media only screen and (max-width:$tablet-screen) {
+  .content-main-container {
+    max-width: 920px;
+  }
+  .image-with-border img {
+    border-width: 10px;
+  }
+  .bhead {
+  	font-size: 2rem !important;
+  }
+}
+@media only screen and (max-width:$small-screen) {
+  .content-main {
+    border-width: 0 !important;
+  }
+}
+@media only screen and (min-width:$mobile-large-screen) and (max-width:$small-screen) {
+  .content-main {
+    padding: 0 30px !important;
+  }
+}
+@media only screen and (max-width:$mobile-large-screen) {
+  .content-main {
+    padding: 0 20px !important;
+  }
+  .body-table {
+  	td {
+	    border: none;
+	    display: block;
+	    width: 100% !important;
+	    padding: 0;
+	    margin-bottom: 1rem;
+	  }
+  }
+  .bhead {
+  	font-size: 1.6rem !important;
+  }
+}
+@media only screen and (max-width:$mobile-portrait) {
+  .body-control-container {
+    border-bottom: 1px solid #e1e1e1;
+    margin: 0;
+    padding: 1rem 0;
+    .body-control:after {
+      content: none;
+    }
+    dt, dd {
+      width: 100%;
+      text-align: center;
+    }
+    dt {
+      margin-bottom: 0.5rem !important;
+    }
+  }
+  .body-control-container+h3 {
+    margin-top: 1rem !important;
+    margin-bottom: 0 !important;
+    text-align: center;
+  }
+}

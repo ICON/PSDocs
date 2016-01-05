@@ -1,0 +1,62 @@
+.has-dropdown > a:after {
+	content: none;
+}
+
+.dropdown {
+	background-color: $dropdown-bg-color;
+	padding: 1rem;
+	z-index: 99;
+	position: absolute;
+	left: 0;
+	width: 100%;
+
+	li {
+	    a {
+	    	@extend .select-outline;
+	  		line-height: 1;
+	  		padding: 1rem 1.25rem;
+	  		display: block;
+	  		text-decoration: none;
+	    }
+		
+		// prevent secondary level dropdown background color
+	    ul { background: transparent; }
+
+		[class^="icon-"],
+		[class*=" icon-"] {
+			padding-right: 0.75rem;
+		}
+	}
+	button {
+		@extend .select-outline;
+	}
+}
+
+
+.top-bar-section .dropdown {
+	position: fixed;
+	top: 50px;
+	right: 0;
+	left: auto;
+	@extend %full-height;
+	max-width: 30%;
+}
+
+
+.dropdown-arrow:before {
+		font-family: 'psdoc-icons';
+		speak: none;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		text-decoration: inherit;
+		display: inline-block;
+		font-size: 0.5rem;
+		content: "\e012";
+		padding-left: 0.5rem;
+		vertical-align: middle;
+}
+
+

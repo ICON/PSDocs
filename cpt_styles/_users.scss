@@ -1,0 +1,11 @@
+table.users {
+  td:last-child {
+    width: 300px;
+  }
+}
+.user-info {
+  .img-responsive {
+    margin-bottom: 1rem;
+    border: 1px solid $medium-grey;
+  }
+}

@@ -1,0 +1,85 @@
+@font-face {
+  font-family: 'cpt-icons';
+  src:url('fonts/cpt-icons.eot');
+  src:url('fonts/cpt-icons.eot?#iefix') format('embedded-opentype'),
+    url('fonts/cpt-icons.woff') format('woff'),
+    url('fonts/cpt-icons.ttf') format('truetype'),
+    url('fonts/cpt-icons.svg#cpt-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'cpt-icons' !important;
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.cpt-icon {
+  font-family: 'cpt-icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.cpt-requests:before {
+  content: "\e001";
+}
+.cpt-legal-requests:before {
+  content: "\e002";
+}
+.cpt-users:before {
+  content: "\e003";
+}
+.cpt-analytics:before {
+  content: "\e004";
+}
+.cpt-settings:before {
+  content: "\e005";
+}
+.cpt-calendar:before {
+  content: "\e006";
+}
+.cpt-live-project:before {
+  content: "\e007";
+}
+.cpt-organization:before {
+  content: "\e008";
+}
+.cpt-open-menu:before {
+  content: "\e009";
+}
+.cpt-home:before {
+  content: "\e00a";
+}
+.cpt-projects:before {
+  content: "\e00b";
+}
+.cpt-minimize:before {
+  content: "\e00c";
+}
+.cpt-collapse:before {
+  content: "\e00d";
+}
+.cpt-qa-requests:before {
+  content: "\e00e";
+}
+.cpt-release-queue:before {
+  content: "\e000";
+}

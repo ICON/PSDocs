@@ -1,0 +1,147 @@
+/*
+* All the basic layout css is here. 
+*/
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  overflow-y: visible;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: $body-font-color;
+  background: url('../../img/playstation_bg.jpg') fixed center center;
+  //background: $content-gradient-top; // We don't support older browsers
+  // background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJlYjBmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI3JSIgc3RvcC1jb2xvcj0iIzJjN2NmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUzJSIgc3RvcC1jb2xvcj0iIzI5NTdlMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc0JSIgc3RvcC1jb2xvcj0iIzE3MmRhZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk5JSIgc3RvcC1jb2xvcj0iIzE1MmFhOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  // background: -moz-linear-gradient(top,  $content-gradient-top 0%, $content-gradient-bottom 99%); /* FF3.6+ */
+  // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$content-gradient-top), color-stop(99%,$content-gradient-bottom)); /* Chrome,Safari4+ */
+  // background: -webkit-linear-gradient(top,  $content-gradient-top 0%, $content-gradient-bottom 99%); /* Chrome10+,Safari5.1+ */
+  // background: -o-linear-gradient(top,  $content-gradient-top 0%, $content-gradient-bottom 99%); /* Opera 11.10+ */
+  // background: -ms-linear-gradient(top,  $content-gradient-top 0%, $content-gradient-bottom 99%); /* IE10+ */
+  // background: linear-gradient(to bottom,  $content-gradient-top 0%, $content-gradient-bottom 99%); /* W3C */
+  // background-attachment: fixed;
+}
+
+*:focus {
+  outline: none;
+}
+.hide-scrollbar {
+  overflow: hidden !important;
+}
+.container-main {
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+.container-view {
+  height: 100%;
+}
+.container-content {
+  padding-top: 3rem;
+  height: 100%;
+}
+.screen-src {
+  height: 100%;
+}
+.container-chapter-content {
+  bottom: 3.125rem;
+  top: 8.125rem;
+  width: 100%;
+  height: 100%;
+}
+.content-main-container {
+  @extend .row;
+  min-height: 100%;
+  height: 100%;
+}
+.content-main {
+  min-height: 100%;
+  height: auto;
+}
+.container-page {
+  padding-top: 0 !important;
+  padding-bottom: 3.75rem; //so i can read the bottom of the damn page
+  word-break: break-word;
+}
+.search-term-keyword {
+  background-color: yellow;
+}
+
+%list-seperator {
+  border: 1px solid $medium-blue;
+  margin: 0;
+}
+
+img .detail-header {
+  background:transparent;
+  float: right;
+  margin-top: -0.9375rem;
+  margin-right: -1.5625rem;
+}
+
+.l-disabled h1, h2, h3, h4 {
+  line-height: 1;
+  white-space: normal;
+}
+
+/** 404 Styling **/
+.fof-container {
+  margin: 0 auto;
+  padding-top: $topbar-height * 2;
+
+  h2 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+
+}
+
+
+
+/** Content Overlay **/
+
+.l-content-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 3.125rem;
+  left: 6rem;
+  background: rgba(0, 0, 0, 0.7) !important;
+  z-index: 999;
+  left: 0;
+}
+.l-content-overlay.transparent {
+  background: transparent;
+}
+
+/** Wysiwyg Classes **/
+.entered {
+  cursor: pointer;
+  @include single-box-shadow(blue, 0px, 0px, 5px, 3px, inset);
+}
+.nested-entered {
+  @include single-box-shadow(none);
+}
+body.selected {
+  @include single-box-shadow(blue, 0px, 0px, 0px, 5px, inset);
+}
+.selected {
+  @include single-box-shadow(blue, 0px, 0px, 0px, 3px, inset);
+}
+
+@media only screen and (min-width:#{$small-screen}){
+  .fof-container {
+    max-width: 70%;
+  }
+}
+
+@media only screen and (max-width:#{$topbar-breakpoint}){
+  .content-left,
+  .content-right,
+  .side-toc {
+    display: none;
+  }
+}

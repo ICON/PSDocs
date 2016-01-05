@@ -1,0 +1,104 @@
+/*
+*  Global Variables and reusables
+*/
+
+//functions
+$em-base: 16px !default;
+
+// Working in ems is annoying. Think in pixels by using this handy function, emCalc(#px)
+@function emCalc($pxWidth) {
+  @return $pxWidth / $em-base * 1em;
+}
+
+//media queries
+$topbar-breakpoint: emCalc(940px) !default;
+$mediaQueryMaxBreakpoint: "only screen and (max-width: #{$topbar-breakpoint})" !default;
+
+$mobile-screen: emCalc(320px);
+$mobile-portrait: emCalc(480px);
+$mobile-large-screen: emCalc(560px);
+$small-screen: emCalc(768px);
+$tablet-screen: emCalc(1024px);
+$medium-screen: emCalc(1280px);
+$large-screen: emCalc(1440px);
+$ps4-fullscreen: emCalc(1900px);
+
+$screen: "only screen";
+$mobile: "only screen and (min-width:#{$mobile-screen})";
+$small: "only screen and (min-width:#{$small-screen})";
+$medium: "only screen and (min-width:#{$medium-screen})";
+$large: "only screen and (min-width:#{$large-screen})";
+$landscape: "only screen and (orientation: landscape)";
+$portrait: "only screen and (orientation: portrait)";
+$maxMobile: "only screen and (max-width:#{$mobile-screen})";
+
+//z-indexes
+$zIndexBase: 0;
+$zIndex1: 1;
+$zIndex2: 2;
+$zIndex3: 3;
+$zIndex100: 100;
+$zIndexBehind: -1;
+
+//basics
+$default-float: left;
+$content-window-padding: 1.5rem;
+
+//baseColors
+$white: #fff;
+$black: #000;
+$dark-grey: #333333;
+$light-blue: #2c7cf1;
+$medium-blue: #298fd7;
+$dark-blue: #202060;
+$dark-blue2: #142d9c;
+$black-transparent: rgba(0,0,0,0.9);
+$white-transparent: rgba(255,255,255,0.9);
+$yellow: #f5f2a5;
+
+//colors
+$footer-bar-bg: transparent; //foundation overwrite
+$topbar-dropdown-bg: $dark-blue !default; //foundation overwrite
+$menu-active-dropdown-color: $medium-blue;
+$menu-item-hover-text-color: $light-blue;
+$menu-item-active-color: $light-blue;
+$menu-item-active-bg: $medium-blue;
+$search-results-text-color: $white;
+$search-field-bg: $white;
+$search-field-text-color: $dark-grey;
+$color-button-icon-bg: $dark-grey;
+$color-button-icon: $white;
+$button-bg: $medium-blue;
+$button-hover-bg: $light-blue;
+$button-color: $white;
+$modal-overlay-color: $black-transparent;
+$header-gradient-left: $dark-blue;
+$header-gradient-right: $medium-blue;
+$content-gradient-top: $light-blue;
+$content-gradient-bottom: #172dae;
+$toc-bg-color: $dark-blue2;
+$glow-color: #2ba6ce;
+
+// header
+$topbar-height: 50px;
+$topBarHeight: 100px;
+$topbar-margin-bottom: emCalc(30px) !default;
+$topbar-title-weight: 700 !default;
+$topbar-title-font-size: emCalc(17px) !default;
+$topbar-link-color: $white !default;
+
+// dropdowns
+$dropdown-bg-color: $dark-blue2;
+$dropdown-highlight-color: rgba(64, 194, 250, 0.1);
+$dropdown-color: $white;
+
+//reusables
+.em-text {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+%full-height, .full-height {
+  height: 100%;
+}
+
+$list-separator: 1px solid $medium-blue;

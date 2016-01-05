@@ -1,0 +1,96 @@
+.menu-dropdown {
+	@extend .dropdown;
+	position: fixed;
+	left: 0;
+	right: 0;
+	width: auto;
+	height: 100% !important;
+	top: 50px;
+	min-height: 100%;
+	overflow-y: scroll;
+	padding-bottom: 55px;
+	text-transform: capitalize;
+	.menu-dropdown-item {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+		font-size: $font-size-medium;
+		.menu-icon {
+			font-size: 34px;
+			line-height: $line-height-base;
+			vertical-align: middle;
+		}
+		.menu-item-title {
+			vertical-align: middle;
+		}
+		.menu-dropdown-link {
+			padding: 8px;
+			line-height: $line-height-large;
+			&:hover {
+				background-color: transparent;
+			}
+			&:active, &.menu-slide-active {
+				color: $white;
+				background: $medium-blue;
+			}
+		}
+		.menu-dropdown-item-icons-link {
+			@extend .button;
+			width: 55px;
+			margin: 5px;
+		}
+	}
+	.menu-expandable {
+		@extend .dropdown;
+		position: static !important;
+		padding: 10px 0;
+		background: rgba(0,0,0,0.2) !important;
+		li {
+			padding-left: 3rem;
+			a:hover {
+				width: 190px;
+			}
+		}
+	}
+	.menu-indented {
+		padding-left: 45px;
+	}
+	&.full-menu {
+		width: 100% !important;
+		min-width: 100%;
+		max-width: 100%;
+		.menu-expandable {
+			width: 100% !important;
+			max-width: 100%;
+			li a {
+				&:hover{
+					width: 100%;
+				}
+			}
+		}
+	}
+	.checkbox + label, .radio + label {
+		vertical-align: bottom;
+		line-height: $line-height-base;
+	}
+	.radio + label:before {
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+		background-color: $light-blue;
+		border-color: $light-blue;
+	}
+	.radio:checked + label:before {
+		padding-left: 5px;
+		line-height: .6;
+		font-size: $font-size-medium;
+		content: "x";
+		background-color: $light-blue;
+		border-color: $light-blue;
+	}
+}
+
+.menu-text {
+	font-size: $font-size-medium;
+}

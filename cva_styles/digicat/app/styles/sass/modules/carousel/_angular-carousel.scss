@@ -1,0 +1,95 @@
+/*
+generic styles applied to any carousel
+must be ul/li 
+*/
+/* variables */
+$rn-carousel-indicator-height: 60px;
+$rn-carousel-control-height: 50px;
+
+/* general */
+.rn-carousel-container {
+    overflow: hidden;
+    position: relative;
+}
+.rn-carousel-slides {
+    transform: translate3d(0,0,0);
+    position: relative;
+    white-space: nowrap;
+    overflow: visible;
+    padding: 0;
+    margin: 0;
+}
+.rn-carousel-slide {
+    white-space: normal;
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+/* indicators */
+.rn-carousel-indicator {
+  width: 100%;
+  text-align:center;
+  height: $rn-carousel-indicator-height;
+  position: relative;
+  bottom: 0;
+  cursor: pointer;
+  margin-top: 10px;
+
+  span {
+    transition: color .2s ease-out;
+    padding: 0 5px;
+    color: #333;
+    font-size: 3rem;
+    &:before {
+      content: "\25cf";
+    }
+  }
+
+  .active {
+    color: white;
+  }
+}
+
+/* controls */
+.rn-carousel-control {
+  transition: opacity 0.2s ease-out;
+  font-size: $rn-carousel-control-height;
+  position: absolute;
+  top: 50%;
+  margin-top: -$rn-carousel-indicator-height - ($rn-carousel-control-height / 2);
+  opacity: 0.75;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.rn-carousel-control-prev {
+    left: 0.5em;
+  }
+
+  &.rn-carousel-control-next {
+    right: 0.5em;
+  }
+}
+
+@media screen and (max-width:#{$small-screen}) {
+  .detailbox {
+    padding: 0 !important;
+  }
+  .rn-carousel-container {
+    .ux-icon {
+      background: none !important;
+      border: none;
+    }
+    .carousel-right {
+      right: 0 !important;
+    }
+    .carousel-left {
+      left: 0 !important;
+    }
+  }
+}

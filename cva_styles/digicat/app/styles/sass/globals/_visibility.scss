@@ -1,0 +1,27 @@
+//global visibility classes
+
+.hide {
+	display: none !important;
+}
+
+.hide:hover{
+	display: none !important;
+}
+
+.show {
+	display: block;
+}
+
+.hide-small {
+	display: none !important;
+}
+
+@media (min-width: $topbar-breakpoint) {
+
+	.hide-medium {
+		display: none !important;
+	}
+	.hide-small {
+		display: inline-block !important;
+	}
+}

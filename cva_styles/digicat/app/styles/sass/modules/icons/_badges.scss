@@ -1,0 +1,25 @@
+$badge-font-size: 0.8rem;
+$badge-diameter: 1.25rem;
+
+.badge {
+	font-family: "Helvetica Neue", Consolas, Helvetica, "Droid Sans", Arial, sans-serif;
+	font-size: $badge-font-size;
+	text-align: center;
+	line-height: 1rem;
+	width: $badge-diameter;
+	height: $badge-diameter;
+	display: inline-block;
+	border-radius: $badge-diameter / 2;
+	color: #fff;
+	background: #d71819;
+	padding: 0.125rem;
+
+	position: absolute;
+	top: 50%;
+	margin-top: -$badge-diameter / 2;
+	left: 0.5rem;
+}
+
+.badge-container {
+	position: relative;
+}

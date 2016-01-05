@@ -1,0 +1,156 @@
+// resogun custom CSS
+$border-color: #646464;
+$border: 2px solid $border-color;
+$link-color: #65bece;
+$hover-color: #c9d6de;
+@font-face {
+  font-family: 'exoregular';
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/46/asset_images/371/exo-regular-webfont.eot);
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/46/asset_images/371/exo-regular-webfont.eot) format('embedded-opentype'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/46/asset_images/362/exo-regular-webfont.woff) format('woff'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/46/asset_images/373/exo-regular-webfont.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'exobold';
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/46/asset_images/368/exo-bold-webfont.eot);
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/46/asset_images/368/exo-bold-webfont.eot?#iefix) format('embedded-opentype'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/46/asset_images/364/exo-bold-webfont.woff) format('woff'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/46/asset_images/369/exo-bold-webfont.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'exoitalic';
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/46/asset_images/785/exo-italic-webfont.eot);
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/46/asset_images/785/exo-italic-webfont.eot?#iefix) format('embedded-opentype'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/46/asset_images/786/exo-italic-webfont.woff) format('woff'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/46/asset_images/787/exo-italic-webfont.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin font-family($weight) {
+  font-family: $weight, "sstregular", helvetica, arial !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+}
+body {
+  background:url(https://cpt-assets.s3.amazonaws.com/projects/46/asset_styles/354/style_bg.jpg) fixed 0 0;
+  color: white;
+  letter-spacing: -1;
+}
+em, i {
+  @include font-family("exoitalic");
+}
+strong {
+  @include font-family("exobold");
+}
+.content-main {
+  background:rgba(12,51,52,0.8);
+  border-left: $border;
+  border-right: $border;
+  padding: 0 60px;
+}
+h2, h3 {
+  @include font-family("exobold");
+  font-size: 30px;
+}
+.chapter-header {
+  background:url('https://cpt-assets.s3.amazonaws.com/projects/46/asset_styles/376/style_ahead_bg.png') no-repeat 0 0;
+  width: 100%;
+  @include font-family("exoregular");
+  padding-left: 1em;
+  margin-left: -30px;
+}
+h2.page-header {
+  font-size: 2em;
+}
+.image-with-border {
+  margin-bottom: 20px;
+  img {
+    border: $border;
+  }
+}
+.ch-1-pg-1-image-1 {
+  margin: 1em 0;
+}
+// float numbers for game screen
+.ch-5 .body-image {
+  img {
+    float: left;
+    margin-right: 10px;
+  }
+}
+// game screen centered layout
+.ch-5-pg-1 {
+  h3, .body-image, p.body-normal {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+  }
+  .body-normal {
+    margin-bottom: 1.5em !important;
+  }
+  h3.bhead {
+    margin-bottom: 0 !important;
+  }
+}
+// legal page
+.ch-7 {
+  text-align: center;
+  .body-image {
+    display: block;
+    margin: 0 auto;
+  }
+}
+// license
+.ch-8 p {
+  font-size: 14px;
+}
+/* Table of Contents */
+.side-toc, .side-toc-container {
+  @include font-family("exoregular");
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -khtml-border-radius: 0;
+  border-radius: 0;
+}
+.side-toc {
+  background:rgba(12,51,52,0.8);
+  border-left: $border;
+  .toc-title {
+    @include font-family("exobold");
+    margin-left: 50px !important;
+    box-shadow: none;
+  }
+  .toc-item {
+    font-size: 30px !important;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    line-height: 1.4;
+    a {
+      margin-left: 0;
+      padding: 10px 0 0 40px;
+      color: $link-color;
+      &:hover, &:active, &.is-active {
+        background:url('https://cpt-assets.s3.amazonaws.com/projects/46/asset_styles/375/style_toc_hover.png') no-repeat 0 0;
+        color: $hover-color;
+        text-shadow: none;
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width:480px) {
+  .body-control-container {
+    border-color: #135b5c;
+  }
+  .ch-1 .bhead {
+    margin: 1em 0 0 !important;
+  }
+  .chapter-header {
+    margin-left: -10px !important;
+  }
+}

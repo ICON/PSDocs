@@ -1,0 +1,48 @@
+@media (min-width: "1900px")
+{
+
+	.ps4
+	{
+
+		.l-sidebar {
+			width: $sidebarWidth;
+		}
+
+		.side-bar {
+			max-width: $sidebarWidth;
+		}
+
+		.sidebar-divider {
+			margin-left: 7.75rem;
+		}
+
+		.submenu-content {
+			margin-top: 3.5rem;
+		}
+
+		.submenu-label,
+		.submenu-items a {
+			padding: 0.75rem;
+		}
+
+		.side-bar-items li:not(.sidebar-divider) {
+
+			padding-right: 3.5rem;
+			padding-left: $safeAreaHDx;
+		}
+
+		.sidebar-submenu {
+			margin-left: $sidebarWidth;
+		}
+
+		.submenu {
+
+			left: $sidebarWidth;
+		}
+
+		.submenu-footer {
+			bottom: $safeAreaHDy;
+		}
+
+	}
+}

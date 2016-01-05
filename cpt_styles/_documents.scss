@@ -1,0 +1,51 @@
+.preview {
+  li {
+    background: transparent;
+    border: none;
+  }
+  .document-image {
+    width: 200px;
+  }
+  .document-screenshot-image {
+    width: 400px;
+  }
+}
+.caption {
+  p:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.thumbnail-container {
+  height: 60px;
+  img {
+    display: block;
+    margin: 10px auto 0;
+  }
+}
+.document-assets {
+  td.actions {
+    width: 20%;
+  }
+}
+.document-content {
+  li {
+    border-bottom: none;
+    .chapter {
+      background: $cool-grey;
+    }
+    .page {
+      background: #DDD;
+    }
+  }
+}
+.asset-queue {
+  li {
+    margin-bottom: 2.12766%;
+    background: none;
+    border-bottom: none;
+    &:nth-child(6n+1) {
+      margin-left: 0;
+    }
+  }
+}

@@ -1,0 +1,147 @@
+// custom styling for flower manual
+@font-face {
+  font-family: "Homemade Apple";
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/48/asset_images/704/homemadeapple-webfont.eot);
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/48/asset_images/704/homemadeapple-webfont.eot?#iefix) format('embedded-opentype'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/48/asset_images/705/homemadeapple-webfont.woff) format('woff'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/48/asset_images/706/homemadeapple-webfont.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Chivo";
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/48/asset_images/708/chivo-regular-webfont.eot);
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/48/asset_images/708/chivo-regular-webfont.eot?#iefix) format('embedded-opentype'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/48/asset_images/709/chivo-regular-webfont.woff) format('woff'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/48/asset_images/710/chivo-regular-webfont.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Chivo Italic";
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/48/asset_images/779/chivo-italic-webfont.eot);
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/48/asset_images/779/chivo-italic-webfont.eot?#iefix) format('embedded-opentype'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/48/asset_images/783/chivo-italic-webfont.woff) format('woff'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/48/asset_images/782/chivo-italic-webfont.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Chivo Black";
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/48/asset_images/781/chivo-black-webfont.eot);
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/48/asset_images/781/chivo-black-webfont.eot?#iefix) format('embedded-opentype'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/48/asset_images/780/chivo-black-webfont.woff) format('woff'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/48/asset_images/784/chivo-black-webfont.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin font-family($weight) {
+  font-family: $weight, "sstregular", helvetica, arial;
+  font-weight: normal !important;
+  font-style: normal !important;
+}
+@import url(http://fonts.googleapis.com/css?family=Homemade+Apple);
+@import url(http://fonts.googleapis.com/css?family=Chivo:400,900);
+$bhead-color: #fdcf00;
+$toc-color: #3e1900;
+body {
+  background: url(https://cpt-assets.s3.amazonaws.com/projects/48/asset_styles/423/style_bg.jpg) fixed top center;
+  color : white;
+  @include font-family("Chivo");
+  font-weight: 400;
+}
+em, i {
+  @include font-family("Chivo Italic");
+}
+strong {
+  @include font-family("Chivo Black");
+}
+.chapter-header, h3.bhead, .toc-title {
+  font-family: "Homemade Apple", cursive !important;
+  text-transform: none !important;
+}
+.chapter-header {
+  font-size: 3.5em;
+  padding: 0 0 13px 10px;
+  text-shadow: 3px 3px #3b6831;
+}
+h3.bhead {
+  color: $bhead-color;
+  font-size: 2em;
+  &.ch-5-pg-1-body-head-4 {
+    text-transform: lowercase;
+  }
+}
+.body-normal {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+.image-with-border, .body-image {
+  margin-bottom: 2em;
+}
+dl, dt {
+  font-weight: normal !important;
+}
+.ch-4, .ch-5 {
+  p {
+    font-size: 0.875em;
+  }
+}
+/* Table of Contents */
+.side-toc, .side-toc-container {
+  color: $toc-color;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -khtml-border-radius: 0;
+  border-radius: 0;
+}
+.side-toc {
+  background: #8dbeed;
+  background: -moz-linear-gradient(top,  rgba(141,190,237,1) 70%, rgba(255,255,255,0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%,rgba(141,190,237,1)), color-stop(100%,rgba(255,255,255,0)));
+  background: -webkit-linear-gradient(top,  rgba(141,190,237,1) 70%,rgba(255,255,255,0) 100%);
+  background: -o-linear-gradient(top,  rgba(141,190,237,1) 70%,rgba(255,255,255,0) 100%);
+  background: -ms-linear-gradient(top,  rgba(141,190,237,1) 70%,rgba(255,255,255,0) 100%);
+  background: linear-gradient(to bottom,  rgba(141,190,237,1) 70%,rgba(255,255,255,0) 100%);
+  height: 70%;
+  .toc-title {
+    box-shadow: none;
+    margin: 20px 0 0 50px !important;
+    color: $toc-color !important;
+  }
+  .toc-item {
+    font-size: 1.875em !important;
+    margin: 0 !important;
+    padding: 0;
+    max-width: 100% !important;
+    .toc-item-link {
+      text-transform: none !important;
+    }
+    a {
+      margin-left: 0;
+      padding: 2px 0 25px 40px;
+      color: $toc-color;
+      &:hover, &:active, &.is-active {
+        background:url(https://cpt-assets.s3.amazonaws.com/projects/48/asset_styles/427/style_toc_hover2.png) no-repeat 0 30px;
+        text-shadow: none;
+        width: 100%;
+      }
+    }
+  }
+}
+@media only screen and (max-width:560px) {
+  .chapter-header {
+    font-size: 2.25em !important;
+  }
+  .bhead {
+    font-size: 1.75em !important;
+  }
+}
+@media only screen and (max-width:480px) {
+  .body-control-container {
+    border-color: #487c10;
+  }
+  .bhead {
+    margin: 1em 0 0 0;
+  }
+}

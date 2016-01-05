@@ -1,0 +1,64 @@
+@mixin background-image($attributes...) {
+  background-image: -webkit-linear-gradient($attributes);
+  background-image: -moz-linear-gradient($attributes); 
+  background-image: -ms-linear-gradient($attributes); 
+  background-image: -o-linear-gradient($attributes); 
+}
+@mixin border-radius($radius...) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin text-shadow($attributes...) {
+  -webkit-text-shadow: $attributes;
+  -moz-text-shadow: $attributes;
+  text-shadow: $attributes;
+}
+@mixin box-shadow($attributes...) {
+  -webkit-box-shadow: $attributes;
+  -moz-box-shadow: $attributes;
+  box-shadow: $attributes;
+}
+@mixin gradient($grad-top, $grad-bottom) {
+  background-color: $grad-top;
+  background: -moz-linear-gradient(top, $grad-top 0, $grad-bottom 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0,$grad-top), color-stop(100%, $grad-bottom));
+  background: -webkit-linear-gradient(top, $grad-top 0,$grad-bottom 100%);
+  background: -o-linear-gradient(top, $grad-top 0,$grad-bottom 100%);
+  background: -ms-linear-gradient(top, $grad-top 0,$grad-bottom 100%);
+  background: linear-gradient(to bottom, $grad-top 0,$grad-bottom 100%);
+}
+@mixin transition($attributes...) {
+  transition: $attributes;
+  -webkit-transition: $attributes;
+  -moz-transition: $attributes;
+  -o-transition: $attributes;
+}
+@mixin text-rotate($deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg); //Firefox
+  -ms-transform: rotate($deg); //IE
+  -o-transform: rotate($deg); //Opera
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); //IE
+}
+@mixin buttons($btn-top-color,$btn-bottom-color) {
+  @include gradient($btn-top-color,$btn-bottom-color);
+  text-shadow: -1px -1px rgba(0,0,0,0.2);
+  border: none;
+  color: $white;
+  &:hover {
+    background-image: none;
+    background-color: $btn-bottom-color;
+  }
+  &:active {
+    @include gradient($btn-bottom-color,$btn-top-color);
+    color: rgba(255,255,255,0.4);
+    text-shadow: none;
+  }
+}
+%thead-style {
+  height: 40px;
+  line-height: 40px;
+  color: $white;
+  background-color: $medium-grey;
+}

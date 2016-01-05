@@ -1,0 +1,150 @@
+.wysiwyg-container {
+  .nav-controls {
+    input {
+      width: 6%;
+      min-width: 45px;
+      font-size: 10px;
+      padding: 3px 6px;
+      height: 26px;
+    }
+  }
+  .wysiwyg-topbar {
+    margin-bottom: 10px;
+    .online-users {
+      .members-count {
+        font-size: 10px;
+      }
+      .member {
+        margin-right: 5px;
+        &:first-child {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  label {
+    font-size: 12px;
+  }
+}
+.toolbar-container {
+  .panel {
+    .panel-heading {
+      height: initial;
+    }
+
+    &.disabled {
+      .panel-heading {
+        color: $stylePanelDisabled;
+        cursor: default;
+      }
+    }
+    .image-placeholder {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.document-reader-preview {
+  .reader-container {
+    overflow-x: scroll;
+    background-color: rgba(0,0,0,0.8);
+    margin-bottom: 40px;
+    .overlay {
+      position: absolute;
+      max-width: 320px;
+      width: 320px;
+      max-height: 568px;
+      height: 568px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: rgba(0,0,0,0.8);
+      color: white;
+      padding: 120px 30px;
+      font-size: 20px;
+    }
+  }
+  .reader-previewer-iframe {
+    display: block;
+    margin: 0 auto;
+    &.mobile {
+      max-width: 320px;
+      width: 320px;
+      max-height: 568px;
+      height: 568px;
+    }
+    &.tablet {
+      max-width: 783px; //15 extra px for the scrollbar
+      width: 783px;
+      max-height: 1024px;
+      height: 1024px;
+    }
+    &.desktop {
+      height: 768px;
+      width: 1366px;
+      &.toc {
+        float: right;
+      }
+    }
+  }
+}
+.tree-navigation-container {
+  .panel {
+    margin-top: 0;
+    .panel-heading {
+      line-height: 50px;
+      vertical-align: middle;
+    }
+  }
+  ul.list-group {
+    .badge {
+      cursor: pointer;
+      float: none;
+      &:hover {
+        background-color: $medium-blue;
+      }
+    }
+    li.list-group-item {
+      background: none;
+      padding: 0;
+      border: none;
+      margin-bottom: 5px;
+      .chapter-label {
+        cursor: pointer;
+        .chapter-text {
+          font-size: 1em;
+          vertical-align: top;
+        }
+      }
+      &:hover {
+        color: $cool-grey;
+      }
+      &.active {
+        font-weight: bold;
+        .chapter-label {
+          color: $medium-blue;
+        }
+      }
+      .pages-list {
+        margin-bottom: 0;
+        padding-left: 10px;
+        li.list-group-item {
+          margin-bottom: 0;
+          margin: 5px 0 10px;
+          cursor: pointer;
+          font-size: 0.8em;
+          &:hover {
+            color: $cool-grey;
+          }
+          &.active {
+            font-weight: bold;
+            .page-label {
+              color: $medium-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}

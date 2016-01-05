@@ -1,0 +1,16 @@
+.top-bar {
+  height: $topBarHeight;
+  margin-bottom: 0;
+}
+
+.top-bar-section .dropdown li label {
+  color: $white;
+}
+
+.top-bar-section .dropdown li {
+  color: $white;
+}
+
+.top-bar-section .subnav-bar li a {
+	line-height: 40px;
+}

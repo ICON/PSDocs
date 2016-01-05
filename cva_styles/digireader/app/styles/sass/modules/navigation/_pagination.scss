@@ -1,0 +1,38 @@
+/*
+* Pagination bar
+*/
+
+.icon-pagination-right {
+	&:before{
+		@extend .icon-rightArrow:before;
+	}
+	padding-left: 0.3125rem;
+}
+
+.icon-pagination-left {
+	&:before{
+		@extend .icon-leftArrow:before;
+	}
+	padding-right: 0.3125rem;
+}
+
+.pagination {
+  position: fixed;
+  bottom: 50%;
+  margin-top: -($button-square / 2) !important;
+  &.page-right {
+    right: 15px;
+    margin-right: 0.625rem;
+  }
+  &.page-left {
+    left: 15px;
+    margin-left: 0.625rem;
+  }
+}
+
+@media only screen and (max-width:$tablet-screen) {
+  // align pagination to bottom of screen on mobile displays
+  .pagination {
+    bottom: 25px !important;
+  }
+}

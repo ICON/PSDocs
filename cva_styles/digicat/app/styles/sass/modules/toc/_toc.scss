@@ -1,0 +1,75 @@
+/*
+*  All the slide out TOC styles be here
+*/
+
+%side-toc-border {
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+	-moz-border-radius-topleft: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+
+.side-toc {
+	position: fixed;
+	z-index: $zIndex3;
+	top: 50px;
+	right: 0;
+	height: 100%;
+	padding: 0 0;
+	width: 459px;
+	background: $toc-bg-color;
+	.side-dropdown {
+		list-style: none;
+		margin: 0;
+		position: relative;
+		height: 100%;
+		.toc-title,
+		.toc-item-link {
+			color: $white;
+			text-transform: uppercase;
+		}
+		.toc-title {
+			margin: 1rem 0 1rem 1rem;
+			font-weight: 700;
+			span {
+				display: inline-block;
+				font-size: $font-size-larger;
+			}
+			.hide-toc-link {
+				position: absolute;
+				top: 1rem;
+				right: 1rem;
+				line-height: 100%;
+				cursor: pointer;
+				font-size: $font-size-normal;
+				color: $white;
+			}
+		}
+		.toc-scrollable-area {
+			overflow-y: scroll;
+			height: 80%;
+			width: 100%;
+			margin: 0;
+			list-style: none;
+			padding: 0;
+		}
+		.toc-item {
+			font-size: $font-size-large;
+			max-width: 429px;
+			margin: 0 1rem 1rem 1rem;
+			list-style: none;
+			a {
+				margin: 0;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+		}
+		.toc-item-link {
+			display: inline-block;
+			width: 100%;
+		}
+	}
+}

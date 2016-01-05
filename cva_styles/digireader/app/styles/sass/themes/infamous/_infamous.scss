@@ -1,0 +1,222 @@
+$base-font-size: 16px;
+$text-color: white;
+$header-gradient-top: #f4b814;
+$header-gradient-bottom: #ff8b01;
+$link-color: $header-gradient-top;
+$toc-bg-color: #191919;
+$toc-glow-color: rgba(255, 137, 0, .75);
+$black-transparent: rgba(0, 0, 0, 0.45);
+$border-image: "https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_images/3602/image_border-claws.png";
+
+@font-face {
+  font-family: "titillium-semibold";
+  src: url(https://psdoc-cpt.s3.amazonaws.com/projects/119/asset_styles/3759/style_titilliumweb-semibold.eot);
+  src: url(https://psdoc-cpt.s3.amazonaws.com/projects/119/asset_styles/3759/style_titilliumweb-semibold.eot#iefix) format("embedded-opentype"), 
+       url(https://psdoc-cpt.s3.amazonaws.com/projects/119/asset_styles/3754/style_titilliumweb-semibold.woff) format("woff"), 
+       url(https://psdoc-cpt.s3.amazonaws.com/projects/119/asset_styles/3755/style_titilliumweb-semibold.ttf) format("truetype"), 
+       url(https://psdoc-cpt.s3.amazonaws.com/projects/119/asset_styles/3758/style_titilliumweb-semibold.svg#titillium-semibold) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "titillium-bold";
+  src: url(https://psdoc-cpt.s3.amazonaws.com/projects/119/asset_styles/3751/style_titilliumweb-bold.eot);
+  src: url(https://psdoc-cpt.s3.amazonaws.com/projects/119/asset_styles/3751/style_titilliumweb-bold.eot#iefix) format("embedded-opentype"), 
+       url(https://psdoc-cpt.s3.amazonaws.com/projects/119/asset_styles/3757/style_titilliumweb-bold.woff) format("woff"), 
+       url(https://psdoc-cpt.s3.amazonaws.com/projects/119/asset_styles/3762/style_titilliumweb-bold.ttf) format("truetype"), 
+       url(https://psdoc-cpt.s3.amazonaws.com/projects/119/asset_styles/3756/style_titilliumweb-bold.svg#titillium-bold) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sourcesans-black";
+  src: url(https://psdoc-cpt.s3.amazonaws.com/projects/119/asset_styles/3753/style_sourcesanspro-black.eot);
+  src: url(https://psdoc-cpt.s3.amazonaws.com/projects/119/asset_styles/3753/style_sourcesanspro-black.eot#iefix) format("embedded-opentype"), 
+       url(https://psdoc-cpt.s3.amazonaws.com/projects/119/asset_styles/3752/style_sourcesanspro-black.woff) format("woff"), 
+       url(https://psdoc-cpt.s3.amazonaws.com/projects/119/asset_styles/3761/style_sourcesanspro-black.ttf) format("truetype"), 
+       url(https://psdoc-cpt.s3.amazonaws.com/projects/119/asset_styles/3760/style_sourcesanspro-black.svg#sourcesans-black) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin font-family($weight) {
+  font-family: $weight, "sstregular", helvetica, arial !important;
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin header-gradient {
+  color: $header-gradient-top; // non webkit browsers will show a solid color
+  background: -webkit-linear-gradient($header-gradient-top, $header-gradient-bottom); /* For Safari 5.1 to 6.0 */
+  //background: -o-linear-gradient($header-gradient-top, $header-gradient-bottom); /* For Opera 11.1 to 12.0 */
+  //background: -moz-linear-gradient($header-gradient-top, $header-gradient-bottom); /* For Firefox 3.6 to 15 */
+  //background: linear-gradient($header-gradient-top, $header-gradient-bottom); /* Standard syntax */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+// defining an image for borders
+body {
+  background: url("https://cpt-assets.s3.amazonaws.com/projects/78/asset_styles/4299/style_ISS-bg.jpg") fixed center center;
+  background-size: cover;
+  @include font-family("titillium-semibold");
+  color: $text-color;
+  font-size: $base-font-size;
+}
+strong, b {
+  @include font-family("titillium-bold");
+}
+
+.chapter-header {
+  @include font-family("sourcesans-black");
+  line-height: 100%;
+  color: $header-gradient-bottom;
+  font-size: 4.25rem;
+  background: url('https://cpt-assets.s3.amazonaws.com/projects/78/asset_styles/4298/style_ISS-header-bg.png') no-repeat 0 0;
+  padding: 0.5rem 0 1rem;
+  span {
+    display: inline;
+    letter-spacing: -3px;
+    padding-right: 0.5rem;
+    @include header-gradient;
+  }
+}
+.page-title, .body-head, .modal-content h3 {
+  @include header-gradient;
+  @include font-family("sourcesans-black");
+  line-height: 100%;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+}
+.page-title {
+  font-size: 3.5rem !important;
+}
+.body-head {
+  font-size: 3rem !important;
+  margin: 0;
+}
+
+.body-normal, dd, dt, .icon-small, .body-hyperlink {
+  font-size: 1.6rem;
+}
+a {
+  color: $link-color;
+  &:hover, &:active, &:focus, .is-active {
+    color: $header-gradient-bottom;
+  }
+}
+.modal-image-container {
+  box-shadow: 5px 5px 10px $black-transparent;
+  img {
+    border: 2px solid black;
+  }
+}
+.grid .row {
+  margin: 1rem 0;
+  .columns {
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+.tooltip > div {
+  vertical-align: baseline;
+}
+/* Table of Contents */
+.side-toc {
+  background:url('https://cpt-assets.s3.amazonaws.com/projects/78/asset_styles/4300/style_toc-bg.jpg') repeat-y 0 0;
+  padding: 5px 0 0 5px;
+  .side-dropdown {
+    -webkit-box-shadow: 0 0 8px 0 $toc-glow-color;
+    -moz-box-shadow: 0 0 8px 0 $toc-glow-color;
+    box-shadow: 0 0 8px 0 $toc-glow-color;
+  }
+  .toc-title {
+    @include font-family("sourcesans-black");
+    padding-left: 4rem;
+    margin: 0 !important;
+    padding-top: 1rem;
+    span {
+      font-size: 4rem !important;
+      letter-spacing: -3px;
+      line-height: 100%;
+      color: $header-gradient-bottom;
+      background: none;
+    }
+  }
+  .toc-item {
+    font-size: 40px !important;
+    margin: 1rem 0 0 0.5rem !important;
+    max-width: 100% !important;
+    height: 55px;
+    a {
+      color: $text-color;
+      line-height: 50px;
+      vertical-align: middle;
+      padding: 0 20px 0 60px;
+      &:hover, &:active, &.is-active {
+        color: $header-gradient-bottom;
+      }
+      &:active, &.is-active {
+        background: url("https://cpt-assets.s3.amazonaws.com/projects/78/asset_styles/4297/style_ISS-toc-item-bg.png") no-repeat 0 0;
+      }
+    }
+  }
+  .toc-item-link {
+    text-transform: none !important;
+  }
+}
+.ch-2-pg-1 .grid, .ch-4-pg-1 .grd, .ch-5-pg-1-bh-2 {
+  margin-top: 2rem;
+}
+// .ch-3-pg-3, .ch-4-pg-1 .grid, .ch-6-pg-1 {
+//   .modal-image-container {
+//     width: 100%;
+//   }
+// }
+.warning span {
+  text-shadow: none;
+}
+@media only screen and (max-width:768px) {
+  .grid .row {
+    width: 100% !important; 
+    margin: 0 !important;
+    .columns {
+      float: none !important;
+      width: 100% !important;
+      padding: 0 !important;
+    }
+  }
+}
+
+@media only screen and (max-width:560px) {
+  .page-title {
+    font-size: 3rem !important;
+  }
+  .body-head {
+    font-size: 2.5rem !important;
+  }
+  .chapter-header {
+    padding: 1rem 0 1.25rem !important;
+  }
+}
+@media only screen and (max-width:480px) {
+  .chapter-header {
+    padding: 1.25rem 0 1.75rem !important;
+  }
+}
+.ps4 .ch-6 {
+  .grid .row {
+    width: 100% !important; 
+    margin: 0 !important;
+    .columns {
+      float: none !important;
+      width: 100% !important;
+      padding: 0 !important;
+    }
+    .modal-image-container {
+      width: 60% !important;
+    }
+  }
+}

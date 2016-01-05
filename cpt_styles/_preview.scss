@@ -1,0 +1,53 @@
+.annotations {
+  height: 250px;
+  overflow-y: scroll;
+  background: $white;
+  padding: 10px;
+  @include border-radius(4px);
+  margin-bottom: 10px;
+
+  .legal-review-title {
+    font-size: 0.9em;
+    font-weight: bold;
+    padding-left: 20px;
+  }
+  .annotation {
+    font-size: 0.8em;
+    position: relative;
+    &.editable {
+      cursor: pointer;
+
+      &:hover {
+        .annotation-content {
+          text-decoration: underline;
+        }
+        i.fa-pencil {
+          display: inline;
+        }        
+      }
+    }
+    i.fa-pencil {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: none;
+    }
+    &.editing {
+      cursor: auto;
+      input.annotation-content-editing, button {
+        display: inline;
+      }
+    }
+    input.annotation-content-editing {
+      width: 90%;
+    }
+    input.annotation-content-editing, button {
+      display: none;
+    }
+    .annotation-timestamp {
+      // margin: -5px 0 0 10px;
+      @extend .align-center;
+      color: $cool-grey;
+    }
+  }
+}

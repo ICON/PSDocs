@@ -1,0 +1,75 @@
+// flow custom stylesheet
+$font-color: #fff;
+@font-face {
+  font-family: "rosario-regular";
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/53/asset_images/1002/rosario-regular-webfont.eot);
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/53/asset_images/1002/rosario-regular-webfont.eot?#iefix) format('embedded-opentype'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/53/asset_images/1001/rosario-regular-webfont.woff) format('woff'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/53/asset_images/999/rosario-regular-webfont.ttf) format('truetype'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/53/asset_images/1000/rosario-regular-webfont.svg#rosarioregular) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "rosario-bold";
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/53/asset_images/995/rosario-bold-webfont.eot);
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/53/asset_images/995/rosario-bold-webfont.eot?#iefix) format('embedded-opentype'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/53/asset_images/997/rosario-bold-webfont.woff) format('woff'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/53/asset_images/998/rosario-bold-webfont.ttf) format('truetype'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/53/asset_images/1003/rosario-bold-webfont.svg#rosariobold) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin font-family($weight) {
+  font-family: $weight, "sstregular", helvetica, arial;
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background:url('https://cpt-assets.s3.amazonaws.com/projects/53/asset_styles/1028/style_bg.jpg') fixed center top;
+  color: $font-color;
+  @include font-family("rosario-regular");
+}
+h1, h2, h3, .toc-title  {
+  @include font-family("rosario-bold");
+  text-transform: none !important;
+}
+p.body-normal {
+  font-size: 1.2em;
+}
+.ch-4 {
+  font-size: 0.8em;
+}
+.side-toc {
+  height: 70% !important;
+  background: -moz-linear-gradient(top,  rgba(77,173,216,1) 70%, rgba(125,185,232,0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%,rgba(77,173,216,1)), color-stop(100%,rgba(125,185,232,0)));
+  background: -webkit-linear-gradient(top,  rgba(77,173,216,1) 70%,rgba(125,185,232,0) 100%);
+  background: -o-linear-gradient(top,  rgba(77,173,216,1) 70%,rgba(125,185,232,0) 100%);
+  background: -ms-linear-gradient(top,  rgba(77,173,216,1) 70%,rgba(125,185,232,0) 100%);
+  background: linear-gradient(to bottom,  rgba(77,173,216,1) 70%,rgba(125,185,232,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dadd8', endColorstr='#007db9e8',GradientType=0 );
+  .toc-title {
+    margin-left: 61px !important;
+  }
+  .toc-item {
+    @include font-family("rosario-regular");
+    max-width: 100% !important;
+    margin-bottom: 0.5rem !important;
+    margin-right: 0 !important;
+    padding-bottom: 0;
+    a {
+      font-size: 30px;
+      margin-left: 0;
+      padding: 0 0 15px 50px;
+      color: $font-color;
+      text-decoration: none;
+      text-transform: none !important;
+      &:hover, &:active, &.is-active {
+        color: #142d51 !important;
+        background:url(https://cpt-assets.s3.amazonaws.com/projects/53/asset_styles/1041/style_squiggle.png) no-repeat 0 35px;
+        width: 100%;
+      }
+    }
+  }
+}

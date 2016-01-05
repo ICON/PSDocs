@@ -1,0 +1,74 @@
+table.table {
+  margin: 1rem 0;
+  thead {
+    tr {
+      @extend %thead-style;
+      th {
+        font-size: 14px;
+        font-weight: normal;
+        text-transform: uppercase;
+        &:last-child {
+          @extend .align-right;
+          padding-right: 1rem;
+        }
+        &.fake-thead {
+          text-align: center;
+        }
+        &.sortable {
+          cursor: pointer;
+          &:hover {
+            color: darken($white, 10%);
+          }
+          &.sorted {
+            font-weight: bold;
+          }
+        }
+        &.nopad {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  tbody {
+    background-color: $content-background;
+    tr {
+      border-bottom: $listElementBorder;
+    }
+    &.t-border {
+      border-bottom: 2px solid $cool-grey;
+      tr > td {
+        vertical-align: middle;
+      }
+    }
+  }
+  td {
+    &:last-child, &.actions, .actions {
+      @extend .align-right;      
+    }
+    &.locales {
+      position: relative;
+    }
+  }
+  &.reviews {
+    tr:first-child {
+      border-bottom: 0;
+    }
+    td {
+      border-top: 0;
+    }
+  }
+  .project-name {
+    font-weight: bold;
+    color: $bodyText;
+  }
+}
+.project-assets-list {
+  td {
+    &:first-child {
+      min-width: 46px;
+    }
+  }
+}
+.fake-thead {
+  @extend %thead-style;
+}

@@ -1,0 +1,258 @@
+// custom CSS for knack manual
+$margin: 1em;
+$img-border: url('https://cpt-assets.s3.amazonaws.com/projects/43/asset_styles/226/style_content_border.png');
+$font-size-medium: 24px;
+$font-size-large: 30px;
+$small-screen: (768px);
+$tablet-screen: (1024px);
+$medium-screen: (1280px);
+
+body {
+  background:url('https://cpt-assets.s3.amazonaws.com/projects/43/asset_styles/64/style_knack_bg.jpg') fixed 0 0;
+  color: #000;
+  letter-spacing: -1px;
+}
+.body-control .obp_sceregular {
+  font-size: 1.75rem;
+}
+.content-main-container {
+  height: 100% !important;
+}
+.chapter-header {
+  color: #333;
+  line-height: 1.2;
+  max-width: 950px;
+  letter-spacing: -1px;
+  width: 100%;
+  padding: 0;
+}
+.bhead, h2.page-header {
+  color: #333333;
+}
+// background image and borders for content area
+.content-main {
+  background: rgba(255,255,255,0.8);
+  padding: 0 20px !important;
+  color: #4b4b4b;
+  border-width: 0 20px;
+  -moz-border-image: $img-border 0 20 round;
+  -webkit-border-image: $img-border 0 20 round;
+  -o-border-image: $img-border 0 20 round;
+  border-image: $img-border 0 20 round;
+}
+.image-with-border {
+  margin-bottom: 20px;
+  img {
+    border-width: 20px;
+    -moz-border-image: $img-border 20 repeat;
+    -webkit-border-image: $img-border 20 repeat;
+    -o-border-image: $img-border 20 repeat;
+    border-image: $img-border 20 repeat;
+  }
+}
+/* Table of Contents */
+.side-toc {
+  font-family: "sstbold", helvetica, arial;
+  background: $img-border repeat 0 0;
+  .toc-title {
+    text-shadow: -3px 0 #667789, 0 3px #667789, 3px 0 #667789, 0 -3px #667789;
+    margin-left: 2rem !important;
+  }
+  .toc-scrollable-area {
+    margin-left: 0 !important;
+  }
+  .toc-item-link {
+    text-transform: capitalize;
+  }
+  .toc-item {
+    margin-right: 0 !important;
+    width: 100%;
+    padding: 0;
+    max-width: 100% !important;
+    font-size: 24px;
+    a {
+      text-transform: none !important;
+      padding: 10px 0 10px 40px;
+      text-shadow: -3px 0 #667789, 0 3px #667789, 3px 0 #667789, 0 -3px #667789;
+      &:hover, &:active, &.is-active {
+        background:url('https://cpt-assets.s3.amazonaws.com/projects/43/asset_styles/61/style_TOC_hover.png') no-repeat left center #d9d9d9;
+        color: #333 !important;
+        text-shadow: none;
+        width: 100%;
+      }
+    }
+  }
+}
+.modal-controls {
+  &.expand {
+    right: 30px !important;
+    top: 30px !important;
+  }
+}
+.ch-1 {
+  h1 {
+    padding-left: 10px;
+  }
+  .body-normal {
+    font-size: $font-size-medium;
+  }
+  img {
+    width: 100%;
+  }
+}
+// hide bheads from page
+.ch-2 {
+  img {
+    width: 40%;
+  }
+  h2.page-header {
+    display: none;
+  }
+  .bhead {
+    font-size: $font-size-large;
+  }
+  .body-normal {
+    font-size: $font-size-medium;
+  }
+}
+// remove gutter on first page
+.content-main {
+  &.ch-1 {
+    padding: 0 !important;
+  }
+  .ch-1-pg-1 .body-normal {
+    padding: 0 20px;
+  }
+  // page 1 hero image
+  .ch-1-pg-1-image-1 {
+    border-top: 2px solid #7f7f7f;
+    border-bottom: 2px solid #7f7f7f;
+    margin-bottom: $margin;
+  }
+  &.ch-2 {
+    h2 {
+      margin-left: 12px;
+    }
+    img {
+      float: left;
+      margin-bottom: 2em;
+    }
+  }
+  .ch-3-pg-1-image-1 {
+    display: block;
+    margin: 0 auto;
+    border-width: 20px;
+  }
+  // float number icons left
+  .ch-4-pg-1 .body-image img {
+    float: left;
+    margin-right: 10px;
+  }
+}
+// game controller
+.body-table {
+  &.ch-3-pg-2-table-2, &.ch-3-pg-1-table-2 {
+    td {
+      width: 50%;
+      &:nth-child(1) {
+        padding-right: 0.5rem;
+      }
+      &:nth-child(2) {
+        padding-left: 0.5rem;
+      }
+    }
+    h3, p {
+      background: #bfc1c4;
+      padding: 10px;
+      margin-bottom: 5px;
+      margin-top: 0;
+    }
+    .image-with-border {
+      margin-bottom: 5px !important;
+    }
+  }
+}
+table .modal-image-container {
+  width: 100% !important;
+}
+.ch-1 {
+  .body-image {
+    margin-bottom: 1em;
+  }
+}
+.ch-4 {
+  h3 {
+    font-size: $font-size-large;
+    padding: 10px 0 0 10px;
+  }
+  p {
+    margin: 1em 0 2em;
+  }
+}
+.ch-5 {
+  table {
+    td {
+      padding: 0 !important;
+      &:nth-child(2) {
+        width: 40%;
+      }
+    }
+    &:first-of-type {
+      td:nth-child(2) {
+        width: 60% !important;
+      }
+    }
+  }
+}
+.ch-8 {
+  p {
+    margin: $margin 0;
+  }
+}
+.ch-9 .container-page {
+  text-align: center;
+  p {
+    margin: $margin 2em;
+  }
+}
+.ch-10, .ch-11 {
+  .body-normal {
+    font-size: 14px !important;
+  }
+}
+@media only screen and (max-width:$tablet-screen) {
+  .image-with-border .modal-image-container {
+    width: 80%;
+  }
+  .content-main {
+    border-width: 0;
+  }
+}
+@media only screen and (max-width:$small-screen) {
+  .image-with-border .modal-image-container {
+    width: 100%;
+  }
+}
+@media only screen and (min-width:560px) and (max-width:768px) {
+  .ch-2 img {
+    width: 50% !important;
+  }
+}
+@media only screen and (max-width:560px) {
+  .body-normal {
+    font-size: 20px !important;
+  }
+  h2.page-header {
+    font-size: 24px !important;
+  }
+  .ux-button.square .ux-icon {
+    color: #333 !important;
+  }
+  .ch-2 .body-image img {
+    float: none !important;
+    width: 100% !important;
+  }
+  .ch-3 h3.bhead {
+    font-size: 24px !important;
+  }
+}

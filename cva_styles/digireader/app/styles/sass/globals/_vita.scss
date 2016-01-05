@@ -1,0 +1,226 @@
+$vita-top-bar-height: 5rem;
+$vita-warning-highlight-color: #f6a022;
+.vita {
+	.content-main { // adds extra padding to vita content area so it doesn't cut off content area
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+	.content-main-container {
+		max-width: 100%;
+	}
+	.icon-profile.charm {
+		position: relative;
+	}
+	.top-bar {
+		margin-bottom: 0;
+		height: $vita-top-bar-height;
+		line-height: $vita-top-bar-height;
+		padding-top: 1rem;
+
+		.icon-profile {
+			margin-right: 15px;
+		}
+		.context-name {
+			font-size: 2rem;
+		}
+	}
+	.charm {
+		font-size: 2.5rem;
+	}
+	.dropdown-arrow {
+		margin-top: -10px;
+		position: absolute;
+	}
+	.menu-dropdown {
+		top: $vita-top-bar-height;
+	}
+
+	// remove fixed positioning because of vita bug
+	.fixed {
+		position: relative !important;
+	}
+	.container-content {
+		padding-top: 0;
+	}
+
+	// move pagination arrows away from edges
+	.pagination {
+		bottom: 40% !important;
+	}
+	.container-pagination-tabs {
+		bottom: 30px;
+	}
+	.pagination-left {
+		margin-left: 16px;
+	}
+	.pagination-right {
+		margin-right: 25px;
+	}
+	.pagination.ux-button.square {
+		background: none !important;
+		border-radius: 0 !important;
+		border: 0 !important;
+		.ux-icon {
+			font-size: 3rem;
+			text-shadow: 2px 2px 5px $black;
+		}
+	}
+
+	// remove fixed positioning on toc
+	.side-toc {
+		position: absolute !important;
+	}
+	.toc-scrollable-area {
+		height: auto;
+	}
+	.l-content-overlay {
+		top: 0;
+		position: absolute;
+		height: 200%;
+	}
+
+	.modal-container, .modal-content {
+		overflow: hidden;
+	}
+
+	// removed fixed positioning on dropdown
+	.top-bar-section .full-menu {
+		position: absolute !important;
+		width: 35% !important;
+		height: auto !important;
+	}
+
+	// remove fixed positioning from search container
+	.search-bar {
+		position: absolute !important;
+		top: $vita-top-bar-height;
+		line-height: normal;
+	}
+	.search-results {
+		background-color: #142d9c;
+		top: 125px;
+		height: auto;
+		max-height: none;
+		position: absolute !important;
+	}
+
+	.detail-wrapper {
+		width: 96%;
+		margin: 0 auto;
+	}
+
+	.detail-header {
+		margin: 10px 0;
+	}
+
+	.warning-wrapper {
+		padding-top: 0;
+	}
+
+	// videoagular 
+	.iconButton {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -50px;
+		margin-top: -50px;
+		visibility: hidden;
+
+		&:before {
+			font-size: 100px;
+			content: "\e020";
+			visibility: visible;
+		}
+	}
+	// mobile layout for control items 
+	.body-control-container {
+	  border-bottom: 1px solid #e1e1e1;
+	  margin: 0;
+	  padding: 1rem 0;
+	  .body-control:after {
+	    content: none;
+	  }
+	  dt, dd {
+	    width: 100%;
+	    text-align: center;
+	  }
+	  dt {
+	    margin-bottom: 0.5rem !important;
+	  }
+	}
+	.body-control-container+h3 {
+	  margin: 1rem 1rem 0.5rem;
+	  text-align: center;
+	}
+}
+
+// applies to vita manuals only
+.platform-psvita {
+	
+	.warning-message {
+		margin: 0;
+		background: #423f3f;
+		border: 0;
+		padding: 2rem 1.5rem;
+		@include font-family("SST");
+		color: #fff;
+		font-size: 1.25rem;
+		text-transform: none;
+
+		h2, h3, h4 {
+			font-family: "SST";
+			font-weight: 700 !important;
+			text-shadow: none;
+		}
+
+		h2 {
+			text-transform: uppercase;
+			&:before {
+				color: $vita-warning-highlight-color;
+			}
+		}
+		h3 {
+			font-size: 1.5rem;
+		}
+		h2, h3 {
+			color: $vita-warning-highlight-color;
+		}
+		h4 {
+			color: #fff;
+		}
+		ul {
+			list-style: none;
+			padding:0;
+			margin:0;
+		}
+
+		li { 
+			padding-left: 2rem; 
+			text-indent: -0.5rem;
+			line-height: 1.75rem;
+		}
+
+		li:before {
+		    content: "•";
+		    padding-right: 0.5rem;
+		    color: $vita-warning-highlight-color;
+		}
+	}
+}
+
+@media screen and (max-width:#{$mobile-portrait}) {
+	.warning-message h2 {
+		font-size: 1.4rem;
+	}
+}
+
+
+body.vita.hide-scrollbar {
+	.container-main {
+		height: 544px;
+		overflow: hidden;
+	}
+}
+.vita-poster {
+	display: block !important;
+}

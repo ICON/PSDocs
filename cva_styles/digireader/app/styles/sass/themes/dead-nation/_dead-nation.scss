@@ -1,0 +1,314 @@
+$base-font-size: 16px;
+$text-color: #d0b99a;
+$header-color: #ba9d25;
+$link-color: #e1852c;
+$text-outline-color: #890202;
+$black-transparent: rgba(0, 0, 0, 0.45);
+$border-image: "https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_images/3602/image_border-claws.png";
+
+@font-face {
+  font-family: "quantico-regular";
+  src: url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3606/style_quantico-regular-webfont.eot);
+  src: url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3606/style_quantico-regular-webfont.eot#iefix) format("embedded-opentype"), url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3607/style_quantico-bold-webfont.woff) format("woff"), url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3613/style_quantico-regular-webfont.ttf) format("truetype"), url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3608/style_quantico-regular-webfont.svg#quanticoregular) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "quantico-italic";
+  src: url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3619/style_quantico-italic-webfont.eot);
+  src: url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3619/style_quantico-italic-webfont.eot?#iefix) format("embedded-opentype"), url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3621/style_quantico-italic-webfont.woff) format("woff"), url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3610/style_quantico-italic-webfont.ttf) format("truetype"), url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3609/style_quantico-italic-webfont.svg#quantico_italic) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "quantico-bold";
+  src: url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3622/style_quantico-bold-webfont.eot);
+  src: url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3622/style_quantico-bold-webfont.eot?#iefix) format("embedded-opentype"), url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3607/style_quantico-bold-webfont.woff) format("woff"), url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3617/style_quantico-bold-webfont.ttf) format("truetype"), url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3605/style_quantico-bold-webfont.svg#quantico_bold) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "quantico-bolditalic";
+  src: url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3615/style_quantico-bolditalic-webfont.eot);
+  src: url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3615/style_quantico-bolditalic-webfont.eot?#iefix) format("embedded-opentype"), url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3618/style_quantico-bolditalic-webfont.woff) format("woff"), url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3616/style_quantico-bolditalic-webfont.ttf) format("truetype"), url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3624/style_quantico-bolditalic-webfont.svg#quantico_bold) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "orbitron-bold";
+  src: url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3611/style_orbitron-bold-webfont.eot);
+  src: url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3611/style_orbitron-bold-webfont.eot?#iefix) format("embedded-opentype"), url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3612/style_orbitron-bold-webfont.woff) format("woff"), url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3620/style_orbitron-bold-webfont.ttf) format("truetype"), url(https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_styles/3614/style_orbitron-bold-webfont.svg#quantico_bold) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin font-family($weight) {
+  font-family: $weight, "sstregular", helvetica, arial !important;
+  font-weight: normal;
+  font-style: normal;
+}
+// defining an image for borders
+body {
+  background: url("https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_images/3603/image_DN-bg.jpg") fixed center center;
+  @include font-family("quantico-regular");
+  color: $text-color;
+  font-size: $base-font-size;
+}
+
+h1, h2, h3, h4 {
+  @include font-family("orbitron-bold");
+  color: $header-color;
+  text-shadow: 2px 2px 0 black;
+}
+
+i, em {
+  @include font-family("quantico-italic");
+}
+
+strong, b {
+  @include font-family("quantico-bold");
+}
+.chapter-header, .body-head, .page-title {
+  text-transform: uppercase;
+}
+.chapter-header {
+  max-width: 900px !important;
+  letter-spacing: -1px;
+}
+.body-head {
+  font-size: 2.5rem;
+}
+.body-normal, dd, dt, .icon-small {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 0 black;
+}
+.ux-icon.icon-small {
+  color: $text-color !important;
+}
+.modal-image-container {
+  width: 80%;
+  img {
+    border-width: 29px 88px 4px 82px;
+    -moz-border-image: url($border-image) 29 88 4 82 stretch;
+    -webkit-border-image: url($border-image) 29 88 4 82 stretch;
+    -o-border-image: url($border-image) 29 88 4 82 stretch;
+    border-image: url($border-image) 29 88 4 82 stretch;
+    border-style:solid;
+  }
+  .modal-controls.expand {
+    top: 40px;
+    right: 100px;
+  }
+}
+/* Table of Contents */
+.side-toc {
+  background: $black-transparent;
+  .toc-title {
+    background: url("https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_images/3604/image_TOC-title-bg.png") no-repeat 0 0;
+    @include font-family("orbitron-bold");
+    height: 103px;
+    line-height: 103px;
+    vertical-align: middle;
+    font-size: 3rem;
+    padding-left: 3.3rem;
+    margin: 0 !important;
+    span {
+      text-shadow:
+      -3px -3px 0 $text-outline-color,
+       3px -3px 0 $text-outline-color,
+      -3px 3px 0 $text-outline-color,
+       3px 3px 0 $text-outline-color;
+    }
+  }
+  .toc-item {
+    font-size: 1.875rem !important;
+    margin: 1rem 0 0 0.5rem !important;
+    max-width: 100% !important;
+    height: 64px;
+    a {
+      color: $link-color !important;
+      line-height: 64px;
+      vertical-align: middle;
+      padding: 0 0 0 67px;
+      &:hover, &:active, &.is-active {
+        background: url("https://psdoc-cpt.s3.amazonaws.com/projects/118/asset_images/3600/image_TOC-item-bg.png") no-repeat 0 0;
+        background-size: 100%;
+        text-shadow: none;
+      }
+    }
+  }
+}
+.warning span {
+  text-shadow: none;
+}
+.ch-4 h3 {
+  margin-top: 0;
+}
+.ch-4-pg-3 p ~ h3 {
+  margin-bottom: 2rem;
+}
+.ch-4-pg-1-grid-1 {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid $header-color;
+}
+.ch-4-pg-1-grid-1-grid-row-1 {
+  .grid {
+    background: $black-transparent;
+    padding: 1rem;
+    border: 1px solid $text-outline-color;
+  }
+  .row {
+    margin: 0;
+  }
+  .columns:nth-child(2) .grid {
+    padding-bottom: 2rem;
+  }
+}
+.ch-4-pg-2, .ch-4-pg-3 {
+  .body-image img {
+    border: 2px solid $text-outline-color;
+  }
+}
+.modal-content {
+  padding: 1rem !important;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  > * {
+    margin: 0 auto;
+  }
+  .body-image {
+    margin-bottom: 1rem;
+  }
+}
+.modal-trigger-text > span {
+  display: inline !important;
+}
+.ch-4-pg-3-modal-content-4-image-1 {
+  width: 80%;
+}
+@media only screen and (max-width: 960px) {
+  .modal-content {
+    > * {
+      width: 90%;
+    }
+  }
+  .ch-4-pg-2-grid-4 .row {
+    .columns {
+      width: 50%;
+      &:nth-child(odd) {
+        clear: left;
+        padding-left: 0;
+      }
+      &:nth-child(even) {
+        clear: right;
+      }
+    }
+  }
+}
+@media only screen and (max-width:768px) {
+  .modal-image-container {
+    img {
+      border: 2px solid $text-outline-color;
+      border-image: none;
+    }
+    .modal-controls.expand {
+      top: 15px;
+      right: 15px;
+    }
+  }
+  .ch-4-pg-1-grid-1-grid-row-1 > .columns {
+    width: 100% !important;
+    margin-bottom: 1rem;
+    float: none;
+  }
+  .ch-4-pg-1-grid-1-grid-row-1 > .columns {
+    &:nth-child(1) {
+      padding-right: 0;
+    }
+    &:nth-child(2) {
+      padding-left: 0;
+    }
+    .body-image img {
+      width: 100%;
+    }
+  }
+}
+@media only screen and (max-width:640px) {
+  .ch-4-pg-1-grid-1-grid-row-1-grid-span6-1-grid-1-grid-row-1, .ch-4-pg-1-grid-1-grid-row-1-grid-span6-2-grid-1-grid-row-1 {
+    > .columns {
+      padding: 0 !important;
+    }
+  }
+}
+@media only screen and (max-width:560px) {
+  .body-normal, dd, dt, .icon-small {
+    font-size: 1.25rem;
+  }
+  .ch-4-pg-2-grid-4 .row {
+    .columns {
+      width: 100%;
+    }
+  }
+}
+.ps4 {
+  .chapter-header {
+    font-size: 60px !important;
+  }
+  .page-title {
+    font-size: 3rem !important;
+  }
+  .modal-content {
+    padding-top: 0 !important;
+  }
+  .ch-4-pg-1-grid-1-grid-row-1-grid-span6-1-grid-1, .ch-4-pg-1-grid-1-grid-row-1-grid-span6-2-grid-1 {
+    .columns {
+      padding: 0;
+      width: 100% !important;
+      margin-bottom: 1rem;
+      float: none !important;
+    }
+    .body-image img {
+      width: 100%;
+    }
+  }
+  .ch-4-pg-3-modal-content-4-image-1 {
+    width: 80%;
+  }
+  .ch-4-pg-3-modal-content-4-body-normal-2 {
+    width: 100%;
+    font-size: 1.8rem !important;
+  }
+  .ch-4-pg-2-grid-4 .row {
+    .columns {
+      width: 50%;
+      &:nth-child(odd) {
+        clear: left;
+        padding-left: 0;
+      }
+      &:nth-child(even) {
+        clear: right;
+      }
+    }
+  }
+}
+.vita {
+  .body-control-container {
+    border-bottom: 1px solid #e1e1e1;
+    margin: 0;
+    padding: 1rem 0;
+    .body-control:after {
+      content: none;
+    }
+    dt, dd {
+      width: 100%;
+      text-align: center;
+    }
+    dt {
+      margin-bottom: 0.5rem !important;
+    }
+  }
+  .body-control-container+h3 {
+    margin: 1rem 1rem 0.5rem;
+    text-align: center;
+  }
+}

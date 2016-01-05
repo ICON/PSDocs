@@ -1,0 +1,39 @@
+h4.compare {
+  margin: 0;
+}
+.platform-distribution h4 {
+  margin-top: 2rem;
+}
+.territory-distribution-chart, .localization-distribution-chart {
+  margin-top: 2rem;
+}
+.analytics-table {
+  min-height: 300px;
+}
+table.analytics {
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+}
+.input-group.duration {
+  display: inline-table;
+  input[type="number"] {
+    display: inline-block;
+    width: 50%;
+    border-right: 0;
+  }
+  .dropdown {
+    display: inline-block;
+    width: auto;
+    button {
+      @include border-radius(0 5px 5px 0);
+    }
+  }
+}
+.analytics-range {
+  .input-group.inline {
+    width: 80%;
+  }
+}
+.general-info label {
+  margin-bottom: 0;
+}

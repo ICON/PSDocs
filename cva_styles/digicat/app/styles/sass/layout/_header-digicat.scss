@@ -1,0 +1,23 @@
+// override digicat non-mobile dropdown
+
+.top-bar-section .menu-expandable.digicat li {
+	display: block;
+	width: auto;
+}
+
+.menu-expandable.menu-indented {
+
+	margin-left: 45px;
+}
+
+.top-bar-section.digicat .digicat-menu-button {
+	display: inline-block;
+}
+
+.top-bar-section.digicat ul li {
+	display: block;
+}
+
+.digicat.container-search-button {
+	width: 14%;
+}

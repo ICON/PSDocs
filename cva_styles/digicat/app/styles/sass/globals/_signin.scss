@@ -1,0 +1,41 @@
+.signin-wrapper {
+    min-height: 85%;
+    padding-top: 10%;
+    text-align: center;
+}
+
+.signin-btn-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 10em;
+    height: 5em;
+    margin-left: -5em;
+    margin-top: -2.5em;   
+    text-align: center;    
+}
+
+.btn.btn-signin {
+    font-size: 1.35rem;
+    line-height: 2.25rem;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.btn-signin:active, .btn-signin:focus {
+    box-shadow: 0 0 15px #fff;
+}
+
+.signin-footer {
+    width: 60em !important;
+    height: 4em;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    margin-left: -30em;
+}
+
+.signin-footer a {
+    color: #fff;
+    font-size: 0.9em;
+}

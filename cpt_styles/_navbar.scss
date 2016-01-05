@@ -1,0 +1,84 @@
+.navbar {
+  @include gradient($topNavBackgroundLight, $topNavBackgroundDark); 
+  @include text-shadow(none);
+  border: none;
+  margin-bottom: 0;
+  .nav {
+    > li {
+      background: transparent;
+      border: none;
+      &.login-link a {
+        line-height: 44px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      > a {
+        color: $white;
+        font-size: 1rem;
+        text-shadow: none;
+        &:hover {
+          color: $topNavTextColorActive;
+          background: rgba(255,255,255,0.1);
+        }
+      }
+      &:active, &.open {
+        > a {
+          color: $topNavTextColorActive !important;
+          background: rgba(255,255,255,0.2) !important;
+        }
+      }
+    }
+    .nav-user {
+      @include clearfix;
+      div {
+        float: left;
+        &:first-child {
+          margin-right: 0.5rem;
+        }
+      }
+      p {
+        margin: 0;
+        line-height: 115%;
+        color: $cool-grey;
+        &:first-child {
+          color: $white;
+        }
+      }
+      img {
+        height: 40px;
+        width: 40px;
+        margin-right: 5px;
+      }
+    }
+  }
+  .navbar-collapse {
+    height: 74px !important;
+    .brand {
+      line-height: 74px;
+    }
+  }
+  .navbar-footer {
+    line-height: 46px;
+    height: 46px;
+    background-color: $sidebarBackgroundDark;
+    color: $white;
+    font-size: 1rem;
+    .btn-group {
+      button {
+        margin-right: 10px;
+      }
+      .dropdown-menu {
+        li {
+          cursor: pointer;
+        }
+      }
+    }
+    span {
+      margin-left: 15px;
+      vertical-align: top;
+    }
+  }
+}
+.navbar-text {
+  line-height: 80px;
+}

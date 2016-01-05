@@ -1,0 +1,147 @@
+html, body {
+  height: 100%;
+  font-size: 16px;
+  margin: 0;
+}
+body {
+  color: $bodyText;
+  font-family: "SST", "Helvetica Neue", helvetica, arial;
+}
+#main-container {
+  height: auto;
+  min-height: 100%;
+  margin: 74px 0 0 0;
+  padding: 0;
+  position: relative;
+  &.sidebar-collapsed.sidebar > .row {
+    &::before {
+      width: 4%;
+    }
+  }
+  &.sidebar > .row {
+    &::before {
+      width: 16.66667%;
+      background: $sidebarBackgroundDark;
+      @include transition(background 250ms linear);
+      display: block;
+      height: 100%;
+      position: absolute;
+    }
+  }
+  > .row {
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+  }
+  &.full-width {
+    height: 100% !important;
+  }
+  &:after {
+    @include transition(width 250ms linear);
+    background-color: $white;
+    bottom: 0;
+    content: "";
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: 83.33%;
+    z-index: 0;  
+  }
+}
+.main-sidebar {  
+  height: 1000px;
+  min-height: 100%;
+  .affix {
+    position: fixed !important;
+    width: 16.66667%;
+    top: 0px;
+    margin-top: 74px;
+  }
+  &.sidebar-collapsed {
+    .affix {
+      width: 4%;
+    }
+  }
+}
+.main-content {
+  height: 100%;
+  min-height: 100%;
+  padding-top: 1rem;
+  background: $white;
+  z-index: 10;
+  &.full-width {
+    width: 100%;
+    padding-top: 0;
+  }
+  &.no-user {
+    background: url('../images/playstation_bg.jpg') no-repeat left bottom;
+    background-size: cover !important;
+  }
+  &.sidebar-collapsed {
+    @include transition(width 100ms linear);
+    width: 96%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.content-area {
+  background-color: $content-background;
+  padding: 1rem;
+}
+.role-switcher {
+  width: 600px;
+  margin: 0 0 0 16.66%;
+  small {
+    color: white;
+    padding: 5px 7px;
+    background-color: rgba(0,0,0,0.3);
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  .btn-group {
+    transition: all 400ms;
+    margin-top: -50px;
+    li {
+      cursor: pointer;
+    }
+  }
+  &:hover, &.sticky {
+    small {
+      background-color: rgba(0,0,0,0.5);
+      opacity: 0.7;
+    }
+    .btn-group {
+      margin-top: 0px;
+    }
+  }
+  &.sticky {
+    small {
+      background-color: rgba(0,0,0,0.8);
+      opacity: 1;
+    }
+  }
+}
+/* Large desktop */
+// @media (min-width: 980px) {
+//   #main-container {
+//     background: $sidebarBackgroundDark;
+//   }
+// }
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  #main-container {
+    background: $white;
+  }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  #main-container {
+    background: $white;
+  }
+}

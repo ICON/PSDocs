@@ -1,0 +1,235 @@
+$base-font-size: 16px;
+$text-color: #fff;
+$bhead-color: #c22a23;
+$body-head-color: #0077c4;
+$img-border: 8px solid #c8c8c8;
+$black-transparent: rgba(0, 0, 0, 0.45);
+$white-transparent: rgba(255,255,255,0.3);
+
+@font-face {
+  font-family: "asap-regular";
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5034/style_asap-regular-webfont.eot);
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5034/style_asap-regular-webfont.eot#iefix) format("embedded-opentype"), 
+  url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5022/style_asap-regular-webfont.woff) format("woff"), 
+  url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5025/style_asap-regular-webfont.ttf) format("truetype"), 
+  url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5029/style_asap-regular-webfont.svg#asapregular) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "asap-italic";
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5038/style_asap-italic-webfont.eot);
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5038/style_asap-italic-webfont.eot#iefix) format("embedded-opentype"), 
+  url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5046/style_asap-italic-webfont.woff) format("woff"), 
+  url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5043/style_asap-italic-webfont.ttf) format("truetype"), 
+  url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5037/style_asap-italic-webfont.svg#asapitalic) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "asap-bold";
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5041/style_asap-bold-webfont.eot);
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5041/style_asap-bold-webfont.eot#iefix) format("embedded-opentype"), 
+  url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5052/style_asap-bold-webfont.woff) format("woff"), 
+  url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5042/style_asap-bold-webfont.ttf) format("truetype"), 
+  url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5045/style_asap-bold-webfont.svg#asapbold) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sourcesans-bold";
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5021/style_sourcesanspro-bold-webfont.eot);
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5021/style_sourcesanspro-bold-webfont.eot#iefix) format("embedded-opentype"), 
+  url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5056/style_sourcesanspro-bold-webfont.woff) format("woff"), 
+  url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5023/style_sourcesanspro-bold-webfont.ttf) format("truetype"), 
+  url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5032/style_sourcesanspro-bold-webfont.svg#sourcesansprobold) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sourcesans-semibold";
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5060/style_sourcesanspro-semibold-webfont.eot);
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5060/style_sourcesanspro-semibold-webfont.eot#iefix) format("embedded-opentype"), 
+  url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5039/style_sourcesanspro-semibold-webfont.woff) format("woff"), 
+  url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5026/style_sourcesanspro-semibold-webfont.ttf) format("truetype"), 
+  url(https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5058/style_sourcesanspro-semibold-webfont.svg#sourcesansprosemibold) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin font-family($weight) {
+  font-family: $weight, "sstregular", helvetica, arial !important;
+  font-weight: normal;
+  font-style: normal;
+}
+// defining an image for borders
+body {
+  background: url("https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5053/style_main-bg.jpg") fixed center center;
+  @include font-family("asap-regular");
+  color: $text-color;
+  font-size: $base-font-size;
+}
+h1, h2, h3, h4 {
+  @include font-family("sourcesans-bold");
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  text-shadow: 2px 2px 0 black;
+  line-height: 100%;
+}
+
+i, em {
+  @include font-family("asap-italic");
+}
+
+strong, b {
+  @include font-family("asap-bold");
+}
+.content-main {
+  background: url('https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5033/style_content-bg.png');
+  border-left: 5px solid $white-transparent;
+  border-right: 5px solid $white-transparent;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+a.body-hyperlink {
+  color: $bhead-color;
+  &:hover, &:active, &:focus {
+    color: $body-head-color;
+  }
+}
+.chapter-header {
+  color: $text-color;
+  font-size: 68px;
+  line-height: 1 !important;
+  margin: 2rem 0 1rem !important;
+  text-shadow: 3px 3px black !important;
+}
+.page-title {
+  color: $bhead-color;
+  font-size: 52px !important;
+}
+.body-head {
+  color: $body-head-color;
+  font-size: 42px !important;
+  margin-top: 0;
+}
+.body-normal, dd, dt {
+  @include font-family("asap-regular");
+  font-size: 26px;
+  text-shadow: 2px 2px black;
+}
+.modal-image-container {
+  width: 75%;
+  margin: 1rem 0 2rem;
+  img {
+    border: $img-border;
+  }
+}
+/* Table of Contents */
+.side-toc {
+  background:url('https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5020/style_toc-bg.png') repeat;
+  padding: 20px;
+  top: 70px !important; //moves toc down from top bar
+  -webkit-border-top-left-radius: 40px;
+  -moz-border-top-left-radius: 40px;
+  border-top-left-radius: 40px;
+  -webkit-box-shadow: -3px -3px 2px 0 white;
+  -moz-box-shadow: -3px -3px 2px 0 white;
+  box-shadow: -3px -3px 2px 0 white;
+  .toc-title {
+    @include font-family("sourcesans-bold");
+    font-size: 52px;
+    padding-left: 40px;
+    margin: 1rem 0 !important;
+  }
+  .toc-item {
+    margin: 0 0 1rem 0 !important;
+    max-width: 100% !important;
+    height: 40px;
+    a {
+      @include font-family("sourcesans-semibold");
+      font-size: 40px;
+      color: #929292 !important;
+      line-height: 40px;
+      vertical-align: middle;
+      padding-left: 45px;
+      &:hover, &:focus, &:active, &.is-active {
+        color: $body-head-color !important;
+      }
+      &:active, &.is-active {
+        @include font-family("sourcesans-bold");
+        background: url("https://cpt-assets.s3.amazonaws.com/projects/77/asset_styles/5048/style_blue-star.png") no-repeat 0 0;
+        padding-top: 3px;
+      }
+    }
+  }
+}
+.body-control-container {
+  border-bottom: 1px dotted #e1e1e1 !important;
+  margin: 0;
+  padding: 1rem 0;
+  .body-control:after {
+    content: none;
+  }
+  dt, dd {
+    width: 100%;
+    text-align: center;
+  }
+  dt {
+    margin-bottom: 0.5rem !important;
+  }
+}
+.body-control-container+h3 {
+  margin: 1rem 1rem 0.5rem;
+  text-align: center;
+}
+.warning span {
+  text-shadow: none;
+}
+.vita .content-main {
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+.tooltip {
+  > div {
+    vertical-align: baseline !important;
+  }
+  .obp_sceregular {
+    padding: 0;
+  }
+}
+@media only screen and (max-width:768px) {
+  .grid .columns {
+    width: 100% !important;
+    float: none !important;
+    padding: 0 !important;
+  }
+  .content-main {
+    border-left: 0 !important;
+    border-right: 0 !important;
+  }
+}
+@media only screen and (max-width:560px) {
+  .chapter-header {
+    font-size: 50px !important;
+  }
+  .page-title, .body-head {
+    font-size: 42px !important;
+  }
+}
+.top-bar-section ul {
+  line-height: 100%;
+}
+.pagination .ux-icon {
+  text-shadow: 2px 2px 5px #000;
+}
+.ps4 {
+  .chapter-header {
+    font-size: 60px;
+  }
+  .page-title {
+    font-size: 46px !important;
+  }
+  .body-normal, dd, dt, .icon-small, .body-hyperlink {
+    font-size: 1.6rem !important;
+  }
+}

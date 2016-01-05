@@ -1,0 +1,38 @@
+form[novalidate] input {
+  border-color: #3498db;
+  border-style: solid;
+  border-left-width: 8px;
+}
+input[required].ng-pristine {
+  border-color: #e74c3c;
+}
+input.ng-invalid.ng-dirty {
+  border-color: #e74c3c;
+}
+input.ng-valid.ng-dirty {
+  border-color: #2ecc71;
+}
+.radio-group {
+  input, select, :not(input[type="number"]) {
+    margin-top: 0.5rem;
+  }
+}
+.radio {
+  margin-bottom: 0.5rem;
+}
+.cpt-pagination {
+  .pagination {
+    width: 45px;
+    padding-left: 5px;
+  }
+}
+.input-group, .form-control {
+  &.inline {
+    display: inline-table;
+    width: auto;
+  }
+}
+.no-val {
+  border-color: $cool-grey !important;
+  border-left-width: 1px !important;
+}

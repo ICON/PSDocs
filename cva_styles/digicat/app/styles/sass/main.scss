@@ -1,0 +1,43 @@
+@import "globals/variables";
+
+// foundation framework
+@import "foundation/normalize.scss";
+@import "foundation/foundation.scss";
+//loading bar css
+
+@import 
+	"globals/global",
+	"globals/typography",
+	"globals/signin",
+	"fonts/sst",
+	"fonts/stratum",
+	"fonts/obp_sceregular",
+	"globals/buttons",
+	"globals/animations",
+	"layout/layout",
+	"layout/states",
+	"layout/animate",
+	"modules/icons/icons",
+	"modules/forms/checkbox",
+	"modules/bar/top-bar",
+	"modules/forms/buttons",
+	"modules/forms/text",
+	"modules/bar/side-bar",
+	"modules/dropdown/dropdown",
+	"modules/modal/modal",
+	"modules/icons/badges",
+	"modules/pills/pills",
+	"modules/modal/detail",
+	"modules/tables/tables",
+	"modules/messagebox/messagebox",
+    "modules/grid/grid",
+    "modules/loadbar/ngProgress",
+    "layout/header",
+    "layout/header-digicat",
+    "layout/search-bar",
+	"layout/mobile-menu";
+
+// browser overrides
+@import
+	"modules/browser-overrides/ps4/ps4",
+	"globals/vita";

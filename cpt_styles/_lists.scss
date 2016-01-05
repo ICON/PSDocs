@@ -1,0 +1,67 @@
+.list {
+  .list-header, .list-footer {
+    height: 30px;
+    line-height: 30px;
+    font-size: 24px;
+    padding: 10px;
+    background-color: $light-grey;
+  }
+
+  .list-info {
+    height: 36px;
+    line-height: 36px;
+    color: $white;
+    text-transform: uppercase;
+    background-color: $medium-grey;
+    [class*="span"]:first-child {
+      padding-left: 10px;
+    }
+    .sortable {
+      cursor: pointer;
+      &:hover {
+        color: darken($white, 10%);
+      }
+      &.sorted {
+        font-weight: bold;
+      }
+    }
+  }
+  
+  ul {
+    margin-left: 0;
+    list-style: none;
+    margin: 0;
+
+    li {
+      min-height: 86px;
+      > .row, a > .row {
+        height: 100%;
+        > [class*="span"] {
+          padding: 10px;
+        }
+      }
+    }
+    &.clickable {
+      li {
+        &:hover {
+          cursor: pointer;
+          background-color: #EFE;
+        }
+        a {
+          color: #333;
+          &:hover {
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+}
+.content-main {
+  ul, ol {
+    margin-bottom: 0;
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

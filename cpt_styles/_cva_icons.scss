@@ -1,0 +1,195 @@
+@font-face {
+  font-family: 'psdoc-icons';
+  src:url('fonts/psdoc-icons.eot');
+  src:url('fonts/psdoc-icons.eot?#iefix') format('embedded-opentype'),
+    url('fonts/psdoc-icons.woff') format('woff'),
+    url('fonts/psdoc-icons.ttf') format('truetype'),
+    url('fonts/psdoc-icons.svg#psdoc-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="cva-"],
+[class*="cva-"] {
+  font-family: 'psdoc-icons' !important;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: inherit;
+  display: inline-block;
+}
+
+.cva-psLogo:before {
+  content: "\e001";
+}
+.cva-search:before {
+  content: "\e003";
+}
+.cva-audioOff:before {
+  content: "\e006";
+}
+.cva-cancel:before {
+  content: "\e004";
+}
+.cva-psvitaLogo:before {
+  content: "\e00a";
+}
+.cva-audioOn:before {
+  content: "\e00c";
+}
+.cva-libraryAdd:before {
+  content: "\e00d";
+}
+.cva-catalog:before {
+  content: "\e00f";
+}
+.cva-profile:before {
+  content: "\e000";
+}
+.cva-library:before {
+  content: "\e005";
+}
+.cva-leftArrow:before {
+  content: "\e008";
+}
+.cva-ps4Logo:before {
+  content: "\e011";
+}
+.cva-downArrow:before {
+  content: "\e012";
+}
+.cva-ps3Logo:before {
+  content: "\e010";
+}
+.cva-cancelSquare:before {
+  content: "\e014";
+}
+.cva-add:before {
+  content: "\e013";
+}
+.cva-sort:before {
+  content: "\e017";
+}
+.cva-viewReverse:before {
+  content: "\e01d";
+}
+.cva-shoppingCart:before {
+  content: "\e00b";
+}
+.cva-remove:before {
+  content: "\e016";
+}
+.cva-upArrowAlt:before {
+  content: "\e009";
+}
+.cva-downArrowAlt:before {
+  content: "\e018";
+}
+.cva-filter:before {
+  content: "\e015";
+}
+.cva-rightArrow:before {
+  content: "\e008";
+}
+.cva-menu:before {
+  content: "\e01a";
+}
+.cva-toc:before {
+  content: "\e002";
+}
+.cva-leftArrow:before {
+  content: "\e019";
+}
+.cva-close:before {
+  content: "\e01e";
+}
+.cva-view:before {
+  content: "\e00e";
+}
+.cva-expand:before {
+  content: "\e007";
+}
+.cva-expand-circle:before {
+  content: "\e602";
+}
+.cva-tooltip:before {
+  content: "\e01b";
+}
+.cva-video:before {
+  content: "\e01f";
+}
+.cva-settings:before {
+  content: "\e600";
+}
+.cva-info:before {
+  content: "\e601";
+}
+.cva-warning:before {
+  content: "\e603";
+}
+
+.cva-xlarge {
+  font-size: 2.5rem;
+}
+.cva-xlarge.cva-psvitaLogo {
+  font-size: 3.25rem;
+}
+.cva-large {
+  font-size: 2rem;
+}
+%icon-medium, .cva-medium {
+  font-size: 1.5rem;
+}
+.cva-small {
+  font-size: 1.25rem;
+}
+.cva-xsmall {
+  font-size: 0.75rem;
+}
+.cva-xxsmall {
+  font-size: 0.5rem;
+}
+.cva-header {
+  font-size: 5rem;
+  //line-height: $line-height-normal;
+}
+%icon-rotate {
+  /* Safari */
+  -webkit-transform: rotate(-90deg);
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+  /* IE */
+  -ms-transform: rotate(-90deg);
+  /* Opera */
+  -o-transform: rotate(-90deg);
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+// $button-square: 47px;
+// $button-circle: 60px;
+// %ux-button, .ux-button {
+//   font-size: $font-size-large;
+//   cursor: pointer;
+//   background-color: $color-button-icon-bg;
+//   border: 1px solid $color-button-icon-bg;
+//   text-align: center;
+//   padding: 8px;
+//   &.square, &%square {
+//     -webkit-border-radius: 4px;
+//     -moz-border-radius: 4px;
+//     border-radius: 4px;
+//   }
+//   &.circle, &%circle {
+//     -webkit-border-radius: $button-circle / 2;
+//     -moz-border-radius: $button-circle / 2;
+//     border-radius: $button-circle / 2;
+//     opacity: 0.8;
+//   }
+// }
+%ux-icon, .ux-icon {
+  color: $white;
+  vertical-align: bottom;
+  display: block;
+  line-height: 100%;
+}

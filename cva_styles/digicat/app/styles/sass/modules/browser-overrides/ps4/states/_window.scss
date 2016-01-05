@@ -1,0 +1,31 @@
+.ps4
+{
+
+	/**
+	 *   States
+	 */
+
+
+	.console-hover {
+		@extend .select-outline;
+	}
+
+	.console-hover-icon {
+		// cursor: none;
+	}
+
+	.console-hover-icon:hover {
+		text-shadow: 0 0 18px, 0 0 10px $glow-color ;
+	}
+
+	.is-active.console-hover-icon {
+		opacity: 1;
+		color: rgba(255, 255, 255, 0.2);
+	}
+
+	.is-active.console-hover-icon:hover {
+		text-shadow: 0 0 16px rgba(255,255,255,0.7);
+	}
+
+	
+}

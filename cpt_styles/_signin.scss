@@ -1,0 +1,43 @@
+.login-container, .confirmation-container {
+  background-color: white;
+  padding: 2rem 1rem;
+  img {
+    width: 96%;
+  }
+}
+.form-signin, .form-password-reset {
+  background-color: $light-grey;
+  padding: 1.5rem;
+  border: 1px solid #e5e5e5;
+  @include border-radius(5px);
+  @include box-shadow(0 1px 2px rgba(0,0,0,.05));
+  .help-inline {
+    color: $btn-danger-grad-top;
+  }
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+  input {
+    margin-bottom: 1rem;
+  }
+}
+.form-password-reset {
+  float: none;
+  max-width: 700px;
+  margin: 0 auto;
+  .help-container {
+    background-color: white;
+  }
+}
+.form-signin {
+   width: 100%;
+   float: right;
+}
+.login-footer {
+  padding-top: 1rem;
+  color: $footer-text;
+  font-size: 1rem;
+  a {
+    color: $footer-text;
+  }
+}

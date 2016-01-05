@@ -1,0 +1,44 @@
+.checkbox, .radio {
+	display: none;
+}
+
+.checkbox + label:before,
+.radio + label:before     {
+	content: "";
+	display: inline-block;
+	background: #2a8efb;
+    border-radius: 4px;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    font-family: 'psdoc-icons';
+    font-size: 2.5rem;
+	line-height: 1.8rem;
+	text-indent: -0.44rem;
+	margin-right: 1rem;
+}
+
+.checkbox + label,
+.radio + label    {
+	cursor: pointer;
+	position: relative;
+}
+
+.checkbox:checked + label:before {
+	content: "\e014";
+	text-align: center;
+	color: #fff;
+}
+
+
+.radio + label:before {
+    border-radius: 13px;
+}
+
+.radio:checked + label:before {
+	background: #fff;
+	border-radius: 13px;
+    width: 25px;
+	border: 5px solid #2a8efb;
+    height: 25px;
+}

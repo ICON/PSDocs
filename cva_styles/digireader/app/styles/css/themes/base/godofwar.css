@@ -1,0 +1,43 @@
+/*
+* GoW Theme
+* Contains all the custom variables and corresponding overrides.
+*/
+/* line 8, ../../../sass/themes/base/godofwar.scss */
+body {
+  background-image: url(../../img/content_bgr_tile.jpg);
+  background-repeat: repeat;
+}
+
+@font-face {
+  font-family: 'godofwar-international';
+  src: url("themes/base/fonts/godofwar-international-webfont.eot");
+  src: url("themes/base/fonts/godofwar-international-webfont.eot?#iefix") format("embedded-opentype"), url("themes/base/fonts/godofwar-international-webfont.woff") format("woff"), url("themes/base/fonts/godofwar-international-webfont.ttf") format("truetype"), url("themes/base/fonts/godofwar-international-webfont.svg#godofwar-international") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 27, ../../../sass/themes/base/godofwar.scss */
+.chapter-header-background-left {
+  background: url(../../img/header-left.png) right top no-repeat;
+}
+
+/* line 31, ../../../sass/themes/base/godofwar.scss */
+.chapter-header-background-right {
+  background: url(../../img/header-right.png) left top no-repeat;
+}
+
+/* line 35, ../../../sass/themes/base/godofwar.scss */
+.chapter-header-background-center {
+  background: url(../../img/header-middle.png) 0 0 repeat-x;
+}
+
+/* line 39, ../../../sass/themes/base/godofwar.scss */
+.chapter-header {
+  color: #fff1a6;
+  font-family: 'godofwar-international';
+}
+
+/* line 44, ../../../sass/themes/base/godofwar.scss */
+.side-toc-container {
+  background: #000;
+}

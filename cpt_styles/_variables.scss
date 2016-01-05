@@ -1,0 +1,63 @@
+$white: #ffffff;
+$light-grey: #e6e6e6;
+$cool-grey: #c2c2c2;
+$medium-grey: #666666;
+$dark-grey: #4a4a4a;
+$light-blue: #d7efff;
+$medium-blue: #5686aa;
+$dark-blue: #1d6091;
+$content-background: #f2f2f2;
+$iconSpritePath: "../images/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+$listElementBackground: $content-background;
+$listElementBorder: 1px solid $cool-grey;
+$topNavBackgroundDark: #0d347f;
+$topNavBackgroundLight: #168cd1;
+$topNavTextColor: $white;
+$topNavTextColorActive: #AFAFAF;
+$bodyText: $dark-grey;
+$sidebarBackgroundDark: #434342;
+$sidebarBackground: #2C2C2C;
+$sidebar-subnav-background: #3c3c3c;
+$sidebarBackgroundActiveTop: #0072CA;
+$sidebarBackgroundActiveBottom: #43A4DB;
+$sidebarBorder: $dark-grey;
+$sidebarTextColor: #AFAFAF;
+$sidebarSuboptionTextColor: #3FA1DA;
+$footer-text: #40a1da;
+
+$styleEditorBorder: $cool-grey;
+$stylePanelDisabled: $cool-grey;
+$styleTreeNavSelected: #185c95;
+
+$success: #468847;
+$successBackground: #dff0d8;
+$error: #b94a48;
+$errorBackground: #f2dede;
+
+$dropzoneBorder: #e3e3e3;
+$dropzoneHelpText: #e3e3e3;
+
+$imagePlaceholder: #d8d8d8;
+$btn-primary-grad-top: #f68547;
+$btn-primary-grad-bottom: #ed6216;
+$btn-info-grad-top: #3da0da;
+$btn-info-grad-bottom: #1380cf;
+// $btn-info-grad-top: #89cef4;
+// $btn-info-grad-bottom: #359ed9;
+$btn-success-grad-top: #64bf4d;
+$btn-success-grad-bottom: #00a650;
+$btn-warning-grad-top: #f0ad4e;
+$btn-warning-grad-bottom: #e8931b;
+$btn-danger-grad-top: #e62323;
+$btn-danger-grad-bottom: #b30c08;
+$btn-inverse-grad-top: #d2d2d2;
+$btn-inverse-grad-bottom: #828282;
+$tab-grad-top: #559eca;
+$tab-grad-bottom: #3482c1;
+
+$border-color: $cool-grey;
+$btn-container-background: $light-blue;
+
+$tooltipArrowWidth:       5px !default;
+$tooltipArrowColor:       #000 !default;

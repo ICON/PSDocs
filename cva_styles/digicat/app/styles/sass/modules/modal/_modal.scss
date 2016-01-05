@@ -1,0 +1,97 @@
+$modal-header-height: 3rem;
+$modal-footer-height: 3rem;
+$modal-content-padding: 2rem;
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	z-index: 99999;
+	overflow: hidden;
+	color: #363636;
+}
+
+.modal-header {
+	position: relative;
+	margin: 0 auto;
+	padding: 1rem 0;
+	height: $modal-header-height;
+}
+
+.modal-content {
+	height: 100%;
+	padding: 1rem;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	> * {
+	  width: 80%;
+	  margin: 0 auto 1rem;
+	}
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.modal-footer {
+	height: $modal-footer-height;
+	position: absolute;
+	bottom: 0;
+	padding: 0.5rem 0;
+}
+
+.modal-close {
+	color: #fff;
+	cursor: pointer;
+}
+.modal-trigger-text {
+	padding-left: 5px;
+	border: 1px solid transparent;
+	> span {
+		display: inline;
+		vertical-align: baseline;
+		cursor: pointer;
+		padding-right: 5px;
+		text-decoration: none;
+		&:nth-child(2) {
+			border-bottom: 1px dotted;
+		}
+	}
+	&:hover, &:active, &:focus, &.is_active {
+		span:nth-child(2) {
+			border-bottom: 1px solid;
+		}
+	}
+}
+.modal-overlay {
+	background: #000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99990;
+}
+
+.modal-controls {
+	@extend %icon-rotate;
+	position: absolute;
+	&.expand {
+		right: 20px;
+		top: 20px;
+	}
+	&.video {
+		top: 50%;
+		left: 50%;
+		margin-left: -($button-circle / 2);
+		margin-top: -($button-circle / 2);
+		padding-top: 10px;
+	}
+}
+

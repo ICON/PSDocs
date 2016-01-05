@@ -1,0 +1,148 @@
+// Base Theme Stylesheet
+//Globals
+$white: #fff;
+$gold: #ead604;
+$ahead-gradient-top: $white;
+$bhead-gradient-top: $gold;
+$gradient-bottom: #222;
+$link-color: $white;
+$hover-color: $gold;
+$border-img: url('https://cpt-assets.s3.amazonaws.com/projects/54/asset_images/851/border-img.jpg');
+@font-face {
+  font-family: "dustismo-regular";
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/54/asset_images/848/dustismo-webfont.eot);
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/54/asset_images/848/dustismo-webfont.eot#iefix) format('embedded-opentype'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/54/asset_images/844/dustismo-webfont.woff) format('woff'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/54/asset_images/838/dustismo-webfont.ttf) format('truetype'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/54/asset_images/841/dustismo-webfont.svg#dustismoregular) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "dustismo-italic";
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/54/asset_images/839/dustismo_italic-webfont.eot);
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/54/asset_images/839/dustismo_italic-webfont.eot?#iefix) format('embedded-opentype'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/54/asset_images/849/dustismo_italic-webfont.woff) format('woff'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/54/asset_images/842/dustismo_italic-webfont.ttf) format('truetype'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/54/asset_images/843/dustismo_italic-webfont.svg#dustismo_italic) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "dustismo-bold";
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/54/asset_images/845/dustismo_bold-webfont.eot);
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/54/asset_images/845/dustismo_bold-webfont.eot?#iefix) format('embedded-opentype'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/54/asset_images/840/dustismo_bold-webfont.woff) format('woff'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/54/asset_images/847/dustismo_bold-webfont.ttf) format('truetype'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/54/asset_images/846/dustismo_bold-webfont.svg#dustismo_bold) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin font-family($weight) {
+  font-family: $weight, "sstregular", helvetica, arial;
+  font-weight: normal;
+  font-style: normal;
+}
+// defining an image for borders
+@mixin border-image {
+  border-width: 0 20px;
+  -moz-border-image: $border-img 0 20 round;
+  -webkit-border-image: $border-img 0 20 round;
+  -o-border-image: $border-img 0 20 round;
+  border-image: $border-img 0 20 round;
+}
+// defining gradients for text
+@mixin text-gradient($top-gradient-color) {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, $top-gradient-color),
+    color-stop(1, $gradient-bottom)
+  );
+  background-image: -o-linear-gradient(bottom, $top-gradient-color 40%, $gradient-bottom 100%);
+  background-image: -moz-linear-gradient(bottom, $top-gradient-color 40%, $gradient-bottom 100%);
+  background-image: -webkit-linear-gradient(bottom, $top-gradient-color 40%, $gradient-bottom 100%);
+  background-image: -ms-linear-gradient(bottom, $top-gradient-color 40%, $gradient-bottom 100%);
+  background-image: linear-gradient(to bottom, $top-gradient-color 40%, $gradient-bottom 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+//defining global manual background and custom fonts
+body {
+  background:url('https://cpt-assets.s3.amazonaws.com/projects/54/asset_images/837/cat-wallpaper-widescreen-60.jpg') fixed center top;
+  color: $ahead-gradient-top;
+  @include font-family("dustismo-regular");
+}
+h1, h2, h3, h4 {
+  @include font-family("dustimo-bold");
+  letter-spacing: -1px;
+}
+i, em {
+  @include font-family("dustimo-italic");
+}
+// define background and borders for content area
+.content-main {
+  background:rgba(0,0,0,0.8);
+  @include border-image;
+  padding: 0 2em;
+}
+// turn off default all-caps on a-head and define background
+.chapter-header {
+  background:url(https://cpt-assets.s3.amazonaws.com/projects/54/asset_images/855/cat-header.png) no-repeat 0 0;
+  height: 113px;
+  line-height: 113px;
+  padding: 25px 0 0 100px;
+  vertical-align: middle;
+  text-transform: none;
+  letter-spacing: -2px;
+  span {
+    @include text-gradient($ahead-gradient-top);
+  }
+}
+h3 {
+  @include text-gradient($bhead-gradient-top);
+}
+h4 {
+  color: $gold;
+}
+// add border to modal images
+.modal-image-container, .body-image {
+  img {
+    border-width: 20px;
+    -moz-border-image: $border-img 20 repeat;
+    -webkit-border-image: $border-img 20 repeat;
+    -o-border-image: $border-img 20 repeat;
+    border-image: $border-img 20 repeat;
+  }
+  .detailbox img {
+    width: 85%;
+    max-height: 90%;
+  }
+}
+/* Table of Contents */
+.side-toc, .side-toc-container {
+  
+}
+.side-toc {
+  background: $border-img;
+  .toc-title {
+    @include font-family("dustimo-bold");
+    margin-left: 2rem !important;
+  }
+  .toc-item {
+    font-size: 1.875rem !important;
+    //margin: 0;
+    //padding: 0;
+    a {
+      color: $link-color !important;
+      padding: 1rem;
+      &:hover, &:active, &.is-active {
+        background:rgba(234,214,4,0.8);
+        background-size: 100%;
+        color: $link-color;
+        text-shadow: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,552 @@
+  // Kill Zone custom CSS
+$trans-black: #414243;
+$bhead-color: #3798a1;
+$border: 1px solid #6a6a6a;
+$link-color: white;
+$hover-color: #242424;
+$img-border: url(https://cpt-assets.s3.amazonaws.com/projects/47/asset_styles/457/style_border_img_stretch.png);
+@font-face {
+  font-family: "SFlight";
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/47/asset_images/448/shadowfall-light-webfont.eot);
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/47/asset_images/448/shadowfall-light-webfont.eot#iefix) format('embedded-opentype'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/47/asset_images/449/shadowfall-light-webfont.woff) format('woff'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/47/asset_images/450/shadowfall-light-webfont.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SFlightOblique";
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/47/asset_images/711/shadowfall-lightoblique-webfont.eot);
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/47/asset_images/711/shadowfall-lightoblique-webfont.eot#iefix) format('embedded-opentype'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/47/asset_images/712/shadowfall-lightoblique-webfont.woff) format('woff'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/47/asset_images/713/shadowfall-lightoblique-webfont.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SFregular";
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/47/asset_images/441/shadowfall-regular-webfont.eot);
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/47/asset_images/441/shadowfall-regular-webfont.eot#iefix) format('embedded-opentype'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/47/asset_images/439/shadowfall-regular-webfont.woff) format('woff'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/47/asset_images/442/shadowfall-regular-webfont.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SFbold";
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/47/asset_images/447/shadowfall-bold-webfont.eot);
+  src: url(https://cpt-assets.s3.amazonaws.com/projects/47/asset_images/447/shadowfall-bold-webfont.eot#iefix) format('embedded-opentype'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/47/asset_images/438/shadowfall-bold-webfont.woff) format('woff'),
+       url(https://cpt-assets.s3.amazonaws.com/projects/47/asset_images/440/shadowfall-bold-webfont.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin font-family($weight) {
+  font-family: $weight, "sstregular", helvetica, arial;
+  font-weight: normal !important;
+  font-style: normal !important;
+}
+@mixin image-border {
+  border-width: 1px;
+  -moz-border-image: $img-border 1 1 stretch;
+  -webkit-border-image: $img-border 1 1 stretch;
+  -o-border-image: $img-border 1 1 stretch;
+  border-image: $img-border 1 1 stretch;
+}
+body {
+  background: url(https://cpt-assets.s3.amazonaws.com/projects/47/asset_styles/431/style_bg.jpg) fixed 0 0;
+  color : white;
+  @include font-family("SFlight");
+}
+.content-main-container {
+  height: 100% !important;
+}
+.content-main {
+  background:rgba(0,0,0,0.8);
+  border-left: 20px solid rgba(0,0,0,0.5);
+  border-right: 20px solid rgba(0,0,0,0.5);
+  padding: 0 60px;
+}
+em, i {
+  @include font-family("SFlightOblique");
+}
+strong {
+  @include font-family("SFBold");
+}
+a.body-hyperlink {
+  text-decoration: none;
+  color: $bhead-color !important;
+  &:hover, &:active, &:focus {
+    color: #c24d37 !important;
+    text-decoration: none;
+  }
+}
+.chapter-header, h3.bhead, .ch-2 p.body-normal, h2.page-header {
+  @include font-family("SFbold");
+}
+.chapter-header {
+  background:url('https://cpt-assets.s3.amazonaws.com/projects/47/asset_styles/434/style_ahead_bg.png') no-repeat 0 0;
+  width: 100%;
+  max-width: 100%;
+  padding-left: 25px;
+}
+h3.bhead, h2.page-header, .ch-2 .body-normal {
+  color: $bhead-color;
+  font-size: 1.75rem !important;
+}
+.body-normal {
+  font-size: 1.3rem;
+}
+.image-with-border img {
+  @include image-border;
+}
+.body-control .obp_sceregular {
+  font-size: 1.5rem;
+}
+.ch-1-pg-1 {
+  img {
+    float: left;
+    margin-right: 1rem;
+    max-width: 40%;
+  }
+  .ch-1-pg-1-body-normal-2 {
+    margin-top: 16px;
+  }
+}
+.ch-2 {
+  p.body-normal {
+    font-size: 1.4rem;
+  }
+  h3 {
+    margin-bottom: 1rem !important;
+  }
+  .body-table {
+    border-collapse: separate;
+    border-spacing: 10px;
+    td {
+      border: $border;
+      background: #363636;
+      width: 50%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.ch-3, .ch-4, .ch-6, .ch-7, .ch-9 {
+  table td {
+    width: 50%;
+    .body-image img {
+      border: $border;
+    }
+  }
+}
+.ch-4 {
+  h3:first-of-type {
+    margin-bottom: 0 !important;
+  }
+  .ch-4-pg-1-body-normal-5 {
+    margin: 1rem 0;
+  }
+}
+.ch-5-pg-1 {
+  img {
+    &.ch-5-pg-1-image-1 {      
+      width: 35%;
+      float: left;
+      margin-right: 1rem;
+    }
+    &.ch-5-pg-1-image-2 {
+      width: 40%;
+      float: none;
+      margin-bottom: 1rem;
+    }
+  }
+}
+.ch-5-pg-2 {
+  .image-with-border {
+    margin-bottom: 2rem;
+  }
+  p {
+    font-size: 1.4rem;
+    &.ch-5-pg-2-body-normal-3, &.ch-5-pg-2-body-normal-6 {
+      padding-top: 14px;
+      margin-bottom: 0.5rem !important;
+    }
+  }
+  .body-image {
+    margin-bottom: 0.5rem;
+    img {
+      float: left;
+      margin-right: 10px;
+    }
+  }
+}
+.ch-6 {
+  .body-image {
+    text-align: left;
+    img {
+      float: left;
+    }
+  }
+  td {
+    width: 50%;
+    &:nth-child(1) {
+      padding-right: 0.5rem;
+    }
+    &:nth-child(2) {
+      padding-left: 0.5rem;
+    }
+  }
+  .body-normal {
+    &.ch-6-pg-1-body-normal-12, &.ch-6-pg-1-body-normal-16, &.ch-6-pg-1-body-normal-20, &.ch-6-pg-1-body-normal-24, &.ch-6-pg-1-body-normal-28, &.ch-6-pg-1-body-normal-30, &.ch-6-pg-1-body-normal-32 {
+      @include font-family("SFbold");
+      padding-top: 15px;
+    }
+  }
+}
+.ch-7, .ch-9-pg-1 {
+  table {
+    td {
+      &:nth-child(1) {
+        width: 15%;
+      }
+      &:nth-child(2) {
+        vertical-align: middle !important;
+      }
+    }
+  }
+}
+.ch-8-pg-2 {
+  p.body-normal {
+    font-size: 1.4rem;
+    &.ch-8-pg-2-body-normal-3, &.ch-8-pg-2-body-normal-11 {
+      padding-top: 14px;
+    }
+    &.ch-8-pg-2-body-normal-6, &.ch-8-pg-2-body-normal-14, &.ch-8-pg-2-body-normal-17, &.ch-8-pg-2-body-normal-20 {
+      padding-top: 10px;
+    }
+  }
+  .bhead {
+    margin-top: 1rem;
+  }
+  .body-image {
+    margin-bottom: 1rem;
+    img {
+      float: left;
+      clear: left;
+      margin: 0 1rem 0 0;
+    }
+  }
+}
+.ch-11 a {
+  font-size: 1.3rem;
+}
+.ch-12 {
+  padding: 60px 0 0;
+  background:url(https://cpt-assets.s3.amazonaws.com/projects/47/asset_styles/468/style_ad_bg1000.jpg) no-repeat center top;
+  background-size: 1000px 1590px;
+  height: 1590px;
+  border: 0 !important;
+  .chapter-header {
+    display: none;
+  }
+  .container-page {
+    text-align: center;
+    width: 52%;
+    margin: 0 auto;
+  }
+  .body-image {
+    margin-bottom: 2rem;
+  }
+  .chapter-header {
+    display: none;
+  }
+  h2 {
+    display: none;
+  }
+  .body-normal {
+    &.ch-12-pg-1-body-normal-2 {
+      margin: 0 auto 1rem;
+      line-height: 0.9;
+      text-transform: uppercase;
+      a {
+        font-size: 5.5rem;
+      }
+    }
+    &.ch-12-pg-1-body-normal-3 {
+      font-size: 4rem;
+      line-height: 100%;
+      @include font-family("SFregular");
+      display: inline-block;
+      margin: 0 !important;
+    }
+    &.ch-12-pg-1-body-normal-4 {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 1.5rem;
+      @include font-family("SFlight");
+      line-height: 100%;
+      margin: 0 !important;
+    }
+    &.ch-12-pg-1-body-normal-5, &.ch-12-pg-1-body-normal-7, &.ch-12-pg-1-body-normal-9 {
+      font-size: 1.875rem;
+      width: 70%;
+      margin: 1rem auto 0;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+    &.ch-12-pg-1-body-normal-6 {
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+    &.ch-12-pg-1-body-normal-11 {
+      background:url(https://cpt-assets.s3.amazonaws.com/projects/47/asset_styles/536/style_cta_bg2.png) no-repeat center top;
+      width: 80%;
+      padding-bottom: 20px;
+      margin: 2rem auto 0;
+      position: relative;
+      a {
+        color: #333 !important;
+        text-decoration: none;
+        font-size: 2.5rem;
+        padding: 8px 0;
+        display: block;
+        margin: 0 auto;
+        &:hover, &:active, &:focus {
+          color: white !important;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  ul {
+    margin: 1rem auto;
+    list-style: none;
+    li {
+      margin: 0;
+      p {
+        margin: 0;
+      }
+      span:before {
+        content: "\25CF";
+        font-size: 0.75rem !important;
+        line-height: inherit;
+        color: $bhead-color;
+        margin-right: 10px;
+        display: inline-block;
+      }
+    }
+  }
+  .body-table {
+    width: 80%;
+    margin: -2.1rem auto 2rem;
+    background: white;
+    color: #333;
+    font-size: 0.875rem;
+    padding-top: 2rem;
+    td {
+      padding: 3rem 1rem 1rem !important;
+    }
+  }
+}
+.ch-13 {
+  p {
+    font-size: 1rem;
+  }
+}
+/* Table of Contents */
+.side-toc, .side-toc-container {
+  @include font-family("SFlight");
+}
+.side-toc {
+  background:rgba(0,0,0,0.9);
+  .toc-title {
+    margin-left: 2.5rem !important;
+    font-family: "SFbold" !important;
+  }
+  .toc-item {
+    font-size: 1.875rem !important;
+    margin: 0;
+    padding: 0;
+    line-height: 0.8;
+    a {
+      margin: 0 0.5rem;
+      padding: 15px;
+      color: $link-color !important;
+      &:hover, &:active, &.is-active {
+        background:url('https://cpt-assets.s3.amazonaws.com/projects/47/asset_styles/464/style_toc_hover.png') no-repeat 0 0;
+        background-size: 100%;
+        color: $hover-color !important;
+        text-shadow: none;
+      }
+    }
+  }
+}
+@media only screen and (min-width:1024px) {
+  .bhead.ch-5-pg-1-body-head-6 {
+    margin: 2rem 0 0;
+  }
+}
+@media only screen and (max-width:1024px) {
+  .ch-7 {
+    .ch-7-pg-1-body-head-3 {
+      margin-top: 13px !important;
+    }
+    .ch-7-pg-1-body-head-6 {
+      margin-top: 42px !important;
+    }
+    .ch-7-pg-1-body-head-12 {
+      margin-top: 45px !important;
+    }
+  }
+  .ch-12 .body-table td {
+    width: 100% !important;
+  }
+}
+@media only screen and (min-width:768px) and (max-width:1024px) {
+  .ch-5-pg-1 {
+    img {
+      &.ch-5-pg-1-image-1 {      
+        width: 40% !important;
+      }
+      &.ch-5-pg-1-image-2 {
+        width: 50% !important;
+      }
+    }
+  }
+  .ch-12 .container-page {
+    width: 70% !important;
+    .ch-12-pg-1-body-normal-11, table {
+      width: 60% !important;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  a:hover {
+    text-decoration: underline !important;
+  }
+  table {
+    width: 100%;
+  }
+  .ch-5-pg-1 {
+    img {
+      width: 45% !important;
+      max-width: 45% !important;
+    }
+  }
+  .content-main {
+    border-width: 0 !important;
+  }
+  .ch-12 {
+    .container-page {
+      width: 100% !important;
+    }
+  }
+}
+@media only screen and (min-width:560px) and (max-width:768px) {
+  .ch-12-pg-1-body-normal-11 {
+    width: 70% !important;
+  }
+  .ch-12 {
+    table {
+      width: 70% !important;
+      margin: 0 auto;
+    }
+    .ch-12-pg-1-image-1 {
+      width: 80% !important;
+    }
+    .ch-12-pg-1-body-normal-2 {
+      font-size: 1rem !important;
+      width: 70%;
+    }
+  }
+} 
+@media only screen and (max-width:560px) {
+  .chapter-header {
+    font-size: 2rem !important;
+  }
+  .ch-1-pg-1 img {
+    max-width: 100% !important;
+  }
+  .ch-2 table {
+    border-spacing: 0 !important;
+  }
+  .ch-5-pg-1 {
+    img {
+      margin: 0 auto 1rem;
+      &.ch-5-pg-1-image-1 {
+        width: 70% !important;
+        max-width: 70% !important;
+        float: none;
+      }
+      &.ch-5-pg-1-image-2 {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+  }
+  .ch-12 {
+    .ch-12-pg-1-body-normal-2 {
+      font-size: 1rem !important;
+      width: 70% !important;
+    }
+    table td {
+      width: 60% !important;
+      margin: 0 auto;
+    }
+  }
+  td {
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (min-width:480px) and (max-width:560px) {
+  .ch-12-pg-1-body-normal-11 {
+    width: 80% !important;
+  }
+} 
+@media only screen and (max-width:480px) {
+  .chapter-header {
+    font-size: 1.75rem !important;
+  } 
+  .ch-2 {
+    .bhead {
+      border-bottom: 2px solid #343434;
+      padding-bottom: 0.5rem;
+      margin-bottom: 0 !important;
+    }
+  }
+  .ch-12 {
+    .ch-12-pg-1-body-normal-5, .ch-12-pg-1-body-normal-7, .ch-12-pg-1-body-normal-9 {
+      width: 90% !important;
+    }
+    .ch-12-pg-1-image-1 {
+      width: 90% !important;
+    }
+    .ch-12-pg-1-body-normal-2 {
+      width: 100% !important;
+    }
+    .ch-12-pg-1-body-normal-3 {
+      font-size: 3.75em !important;
+    }
+    .ch-12-pg-1-body-normal-4 {
+      font-size: 1rem !important;
+    }
+    .ch-12-pg-1-body-normal-5 {
+      font-size: 2rem !important;
+      line-height: 1.2 !important;
+    }
+    .ch-12-pg-1-body-normal-11, table {
+      font-size: 1rem !important;
+      width: 90% !important;
+    }
+    ul li p {
+      line-height: 1.2 !important;
+    }
+  }
+}
+.ps4 .ch-12 {
+  .body-image {
+    margin-bottom: 0 !important;
+  }
+}

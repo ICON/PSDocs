@@ -1,0 +1,29 @@
+
+@media (min-width: "1900px")
+{
+
+	.ps4
+	{
+
+		.top-bar {
+			height: $topBarHeight;
+			padding-top: $safeAreaHDy;
+
+			.title-area {
+				margin-left: $safeAreaHDx;
+				list-style-type: none;
+			}
+			.right {
+				margin-right: $safeAreaHDx;
+			}
+		}
+
+		.search-bar {
+			top: $topBarHeight;
+		}
+
+		.top-bar-section .dropdown {
+			width: 30% !important;
+		}
+	}
+}

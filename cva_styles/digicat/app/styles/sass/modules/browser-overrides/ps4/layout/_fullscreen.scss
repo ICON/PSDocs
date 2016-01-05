@@ -1,0 +1,45 @@
+@media (min-width: "1900px")
+{
+
+	.ps4
+	{
+
+		.l-content {
+			width: 88%;
+		}
+		
+		.l-content-window {	
+			max-width: $contentWindowWidth;
+			margin-top: 20px;
+			height: $contentWindowHeight;
+			overflow-y: auto;
+		}
+
+		.l-content-overlay {
+			left: $sidebarWidth;
+		}
+
+		.content-title {
+			padding-left: 2rem;
+
+			margin-bottom: 0.75rem;
+		}
+
+		.large-grid {
+			width: percentage(1/5);
+		}
+
+		.grid-item {
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
+
+			.grid-item-title {
+				line-height: 2rem;
+			}
+
+		.grid-container {
+			padding-bottom: $safeAreaHDy
+		}
+	}
+}

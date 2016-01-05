@@ -1,0 +1,184 @@
+//
+// Top Bar Variables
+//
+$include-html-top-bar-classes: $include-html-classes !default;
+
+// Background color for the top bar
+$topbar-bg: #111 !default;
+
+// Height and margin
+$topbar-height: 45px !default;
+$topbar-margin-bottom: emCalc(30px) !default;
+
+// Control Input height for top bar
+$topbar-input-height: 2.45em !default;
+
+// Controlling the styles for the title in the top bar
+$topbar-title-weight: bold !default;
+$topbar-title-font-size: emCalc(17px) !default;
+
+// Style the top bar dropdown elements
+$topbar-dropdown-bg: #222 !default;
+$topbar-dropdown-link-color: #fff !default;
+$topbar-dropdown-link-bg: lighten($topbar-bg, 5%) !default;
+$topbar-dropdown-toggle-size: 5px !default;
+$topbar-dropdown-toggle-color: #fff !default;
+$topbar-dropdown-toggle-alpha: 0.5 !default;
+
+// Set the link colors and styles for top-level nav
+$topbar-link-color: #fff !default;
+$topbar-link-color-hover: #fff !default;
+$topbar-link-color-active: #fff !default;
+$topbar-link-weight: bold !default;
+$topbar-link-font-size: emCalc(13px) !default;
+$topbar-link-hover-lightness: -30% !default; // Darken by 30%
+$topbar-link-bg-hover: darken($topbar-bg, 3%) !default;
+$topbar-link-bg-active: darken($topbar-bg, 3%) !default;
+
+$topbar-dropdown-label-color: #555 !default;
+$topbar-dropdown-label-text-transform: uppercase !default;
+$topbar-dropdown-label-font-weight: bold !default;
+$topbar-dropdown-label-font-size: emCalc(10px) !default;
+
+// Top menu icon styles
+$topbar-menu-link-transform: uppercase !default;
+$topbar-menu-link-font-size: emCalc(13px) !default;
+$topbar-menu-link-weight: bold !default;
+$topbar-menu-link-color: #fff !default;
+$topbar-menu-icon-color: #fff !default;
+$topbar-menu-link-color-toggled: #888 !default;
+$topbar-menu-icon-color-toggled: #888 !default;
+
+// Transitions and breakpoint styles
+$topbar-transition-speed: 300ms !default;
+$topbar-breakpoint: emCalc(940px) !default; // Change to 9999px for always mobile layout
+$topbar-media-query: "only screen and (min-width: #{$topbar-breakpoint})" !default;
+
+// Divider Styles
+$topbar-divider-border-bottom: solid 1px lighten($topbar-bg, 10%) !default;
+$topbar-divider-border-top: solid 1px darken($topbar-bg, 10%) !default;
+
+// Sticky Class
+$topbar-sticky-class: ".sticky" !default;
+
+$subnav-height: 55px;
+
+
+  // Wrapped around .top-bar to make it stick to the top
+%fixed, .fixed {
+  width: 100%;
+  #{$default-float}: 0;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+.top-bar {
+  height: $topbar-height;
+  line-height: $topbar-height;
+  position: relative;
+  // background: $topbar-bg;
+  margin: 0 !important;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+
+  // Title Area
+  .title-area {
+    position: relative;
+    margin: 0;
+    float: left;
+  }
+
+  .name {
+    height: $topbar-height;
+    margin: 0;
+    font-size: $em-base;
+
+    h1 {
+      font-size: $topbar-title-font-size;
+      margin: 0;
+      max-width: 13rem;
+      a {
+        font-weight: $topbar-title-weight;
+        line-height: $topbar-height;
+        color: $topbar-link-color;
+        width: 100%;
+        display: block;
+        padding: 0 $topbar-height / 3;
+      }
+    }
+  }
+}
+
+// .top-bar-center {
+//   position: static;
+//   text-align: left;
+//   float: left;
+// }
+
+.top-bar-title {
+  margin: 0 0 0 1em ;
+  float: left;
+  max-width: 68%;
+}
+
+.context-name {
+  line-height: $topbar-height;
+  margin: 0;
+  font-weight: normal;
+  color: $topbar-link-color !important;
+  text-transform: none !important;
+}
+
+.top-bar-section {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: "SST";
+    line-height: 100%;
+    li {
+      display: inline-block;
+    }
+  }
+
+  li a {
+    line-height: $topbar-height;
+    padding: 0 $topbar-height / 3;
+    color: $dropdown-color;
+  }
+
+}
+
+.title-area h2 {
+  padding-left: 0.9rem;
+  padding-top: 9px;
+}
+
+.top-title {
+  font-family: "SST" !important;
+  font-weight: normal;
+}
+
+.subnav-bar {
+
+  display: block;
+
+  ul {
+    margin: 0;
+    a {
+      line-height: $subnav-height;
+    }
+  }
+
+}
+
+@media #{$small} {
+  .top-bar-center {
+    float: none;
+    position: absolute;
+    width: 70%;
+    margin-left: 0;
+    text-align: left;
+    padding-left: 20px;
+  }
+}

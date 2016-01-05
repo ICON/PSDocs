@@ -1,0 +1,56 @@
+/*
+* digicat and digireader share many similar styles.
+* to make life easy, shared styles are in digicat
+* digireader sass files only have digireader-only styles
+*/
+@import "compass";
+@import "compass/css3";
+//global variables and other globals
+@import "digicatsass/globals/variables";
+@import "digicatsass/globals/typography";
+@import "digicatsass/globals/visibility";
+@import "digicatsass/modules/icons/icons";
+@import "digicatsass/modules/modal/modal";
+@import "modules/modal/modal";
+@import "digicatsass/modules/messagebox/messagebox";
+@import "digicatsass/globals/animations";
+@import "digicatsass/globals/buttons";
+@import "digicatsass/fonts/sst";
+@import "digicatsass/fonts/obp_sceregular";
+
+//foundation framework
+@import "digicatsass/foundation/foundation";
+
+//our custom scss
+@import "layout/layout";
+@import "layout/content";
+@import "digicatsass/modules/bar/top-bar";
+@import "digicatsass/modules/dropdown/dropdown";
+@import "digicatsass/modules/toc/toc";
+@import "digicatsass/modules/tooltips/tooltips";
+@import "layout/warning";
+@import "digicatsass/modules/carousel/bootstrap-carousel";
+@import "digicatsass/modules/carousel/carousel";
+@import "digicatsass/layout/states";
+@import "digicatsass/globals/signin";
+@import "digicatsass/layout/header";
+@import "digicatsass/layout/mobile-menu";
+@import "digicatsass/layout/search-bar";
+@import "digicatsass/modules/videogular/videogular";
+@import "digicatsass/modules/loadbar/ngProgress";
+@import "modules/navigation/pagination";
+
+//ps4 specific overrides
+@import "globals/ps4";
+@import "globals/vita";
+
+//current theme
+//@import "themes/escape-plan/escape-plan";
+//@import "themes/resogun/resogun"
+//@import "themes/sound-shapes/sound-shapes";
+//@import "themes/knack/knack";
+//@import "themes/kzsf/kzsf";
+//@import "themes/base/godofwar";
+//@import "themes/drive-club/dc";
+//@import "themes/drive-club/dc2";
+//import "themes/drive-club/driveclub";

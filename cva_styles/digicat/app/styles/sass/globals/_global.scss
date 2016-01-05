@@ -1,0 +1,169 @@
+html,
+body { 
+  height: 100%; 
+  overflow: hidden; 
+}
+
+// Default body styles
+body {
+  padding: $topbar-height 0 0 0;
+  font-family: $body-font-family;
+  font-size: $font-size-normal;
+  font-weight: $body-font-weight;  
+  line-height: $line-height-base;
+  color: $body-font-color;
+  line-height: 1.4;
+  background: $content-gradient-top; /* Old browsers */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJlYjBmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI3JSIgc3RvcC1jb2xvcj0iIzJjN2NmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUzJSIgc3RvcC1jb2xvcj0iIzI5NTdlMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc0JSIgc3RvcC1jb2xvcj0iIzE3MmRhZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk5JSIgc3RvcC1jb2xvcj0iIzE1MmFhOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(top,  $content-gradient-top 0%, $content-gradient-bottom 99%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$content-gradient-top), color-stop(99%,$content-gradient-bottom)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $content-gradient-top 0%, $content-gradient-bottom 99%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $content-gradient-top 0%, $content-gradient-bottom 99%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $content-gradient-top 0%, $content-gradient-bottom 99%); /* IE10+ */
+  background: linear-gradient(to bottom,  $content-gradient-top 0%, $content-gradient-bottom 99%); /* W3C */
+  background-attachment: fixed;
+}
+em, i {
+  font-family: "SST";
+  font-weight: 400;
+  font-style: italic;
+}
+strong {
+  font-family: "SST";
+  font-weight: 700;
+  font-style: normal;
+}
+a {
+  color: #0078c8;
+  text-decoration: none !important;
+}
+ul, ol {
+  list-style-position: inside !default;
+  margin: 0 !important;
+}
+.top-bar {
+  background: rgba(1, 61, 148, 0.3) url(../../img/bg-header.png);
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+.vertical-divider {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  height: 0;
+  margin: 20px auto;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.split-left {
+  float: left;
+  text-align: left;
+  width: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+.split-right {
+  float: right;
+  text-align: right;
+  width: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  color: #fff;
+}
+
+.is-active {
+  opacity: 0.2;
+}
+
+.link-list {
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+.em-text {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.text-success {
+  color: green;
+  font-weight: bold;
+}
+.text-error {
+  color: red;
+  font-weight: bold;
+}
+
+.reset-font-size {
+  font-size: 1rem;
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+
+// remove browser outline
+input[type="button"], 
+input[type="submit"], 
+input[type="reset"], 
+input[type="file"]::-webkit-file-upload-button, 
+button {
+    outline: 0;
+}
+
+// colors of thumb-label by type
+.bg-style-guide {
+  background-color: #a2c716 !important;
+}
+
+.bg-style-manual {
+  background-color: #003791 !important;
+
+}
+
+.bg-style-book {
+  background-color: #f29900 !important;
+}
+
+.content-title {
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  padding-left: 0.9rem;
+  margin: 0.25rem 0;
+  letter-spacing: 1px;
+}
+
+.platform-title {
+  color: #fff;
+  margin: 0;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.inline-icon {
+  line-height: 1.7 !important;
+  vertical-align: top;
+  display: inline-block;
+}
+
+
+
+@media (min-width: 30em) {
+  html, body { font-size: 12px; }
+}
+
+@media (min-width: 37em) {
+  html, body { font-size: 14px; }
+}
+
+@media (min-width: 56em) {
+  html, body { font-size: 16px; }
+}

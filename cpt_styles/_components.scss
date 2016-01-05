@@ -1,0 +1,134 @@
+.search {
+  border: 1px solid $input-border;
+  @include border-radius(18px);
+  position: relative;
+  input {
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    padding-right: 15px;
+    transition: none;
+    -webkit-transition: none;
+  }
+  i.fa {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
+.slider-container {
+  .slider {
+    cursor: pointer;
+    display: inline-block;
+    max-width: 250px;
+    width: 100%;
+  }
+  .ui-slider.ui-slider-horizontal {
+    background: $cool-grey;
+    height: 0.6rem;
+  }
+  .ui-slider-range {
+    @include gradient($btn-primary-grad-top,$btn-primary-grad-bottom);
+  }
+}
+.datepicker-container {
+  position: relative;
+  .dropdown-menu {
+    left: auto !important;
+    right: 0;
+    td {
+      padding: 0;
+    }
+  }
+}
+.color-picker .color-picker-type {
+  position: relative;
+  .color-sample {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 32px;
+    height: 32px;
+    @include border-radius(4px 0 0 4px);
+    border-right: 1px solid $border-color;
+  }
+  input {
+    width: 100%;
+    padding-left: 41px;
+  }
+}
+.colorpicker.dropdown {
+  position: absolute;
+}
+button.datepicker {
+  text-align: left;
+  padding-right: 10px;
+  padding-left: 10px;
+  i {
+    float: right;
+    padding-top: 3px;
+  }
+}
+.locale-selector {
+  width: 250px;
+  height: auto;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 15px;
+  border: 1px solid $border-color;
+  background: $light-grey;
+  z-index: 10;
+  .done {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+  }
+  h5 {
+    margin: 0 0 10px 0;
+  }
+  p {
+    margin-top: 0;
+  }
+  .locale {
+    display: inline-block;
+    .btn {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+.project-reviewers .locale-selector {
+  top: -60px !important;
+  left: 0 !important;
+}
+.select2-container {
+  min-width: 300px !important;
+  .select2-choices {
+    @include border-radius(2px);
+  }
+}
+.sortable {
+  cursor: move;
+  td {
+    background: $content-background;
+  }
+}
+.tabbable {
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    background: $content-background;
+  }
+  .tab-content {
+    @include border-radius(0 0 5px 5px);
+    background: $content-background;
+    padding: 15px 15px 0 15px;
+    border: {
+      left: 1px solid $light-grey;
+      right: 1px solid $light-grey;
+      bottom: 1px solid $light-grey;
+    }
+    table tr:last-child {
+      border-bottom: 0;
+    }
+  }
+}

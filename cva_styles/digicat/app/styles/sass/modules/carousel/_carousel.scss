@@ -1,0 +1,79 @@
+/*
+generic styles applied to any carousel
+must be ul/li 
+*/
+
+/* variables */
+$carousel-indicator-height: 60px;
+$carousel-control-height: 50px;
+
+.carousel-indicators {
+  position: relative;
+  left: 0;
+  bottom: 0 !important;
+  width: 100%;
+  margin: 0;
+  li {
+    display: inline;
+    transition: color .2s ease-out;
+    padding: 0;
+    color: #333;
+    font-size: 3rem;
+    line-height: 100%;
+    text-indent: 0;
+    border: none;
+    border-radius: 0;
+
+    &:before {
+      content: "\25cf";
+    }
+    &.active {
+      color: #fff;
+      background-color: transparent;
+    }
+  }
+}
+
+
+/* controls */
+.carousel-control {
+  transition: opacity 0.2s ease-out;
+  font-size: $carousel-control-height;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  bottom: auto;
+  margin-top: -$carousel-control-height / 2;
+  opacity: 0.75;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.left {
+    left: 0.5em;
+  }
+
+  &.right {
+    right: 0.5em;
+  }
+}
+
+@media screen and (max-width:#{$small-screen}) {
+  .detailbox {
+    padding: 0 !important;
+  }
+  .rn-carousel-container {
+    .ux-icon {
+      background: none !important;
+      border: none;
+    }
+    .carousel-right {
+      right: 0 !important;
+    }
+    .carousel-left {
+      left: 0 !important;
+    }
+  }
+}

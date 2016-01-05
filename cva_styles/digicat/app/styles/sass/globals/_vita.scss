@@ -1,0 +1,45 @@
+.vita 
+{
+
+	// remove gradient background
+	background: #2c78ef !important;
+
+	.icon-profile.charm {
+		position: relative;
+	}
+	.top-bar .icon-profile {
+		margin-right: 15px;
+	}
+	.dropdown-arrow {
+		margin-top: -10px;
+		position: absolute;
+	}
+
+	// remove transition states
+
+	.select-outline, 
+	.submenu-items a, 
+	.submenu-label, 
+	.dropdown li a, 
+	.menu-dropdown li a, 
+	.menu-expandable li a, 
+	.dropdown button, 
+	.menu-dropdown button, 
+	.menu-expandable button,
+	.animate-width {
+		transition: none !important;
+		-webkit-transition: none !important;
+	}
+
+	// detailview
+	.modal-header {
+		padding: 0.75rem 0.5rem 0 0;
+	}
+	.modal-content {
+		margin-top: 0.5rem;
+	}
+	.detail-img img {
+		max-height: 23rem;
+		width: auto;
+	}
+}

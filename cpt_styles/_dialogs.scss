@@ -1,0 +1,40 @@
+.modal-dialog {
+  width: 700px;
+  .modal-content {
+    background-color: $content-background;
+    @include border-radius(0);
+    .modal-header {
+      background: $white;
+      h4 {
+        margin: 0;
+      }
+    }
+    .modal-body {
+    }
+    .modal-footer {
+      background-color: $btn-container-background;
+      padding: 0.75rem;
+    }
+  }
+}
+.add-font-face, .manage-fonts {
+  .row {
+    margin-bottom: 0.5rem;
+  }
+  .fa-check {
+    color: $btn-success-grad-top;
+  }
+  .fa-times {
+    color: $btn-danger-grad-top;
+  }
+  button .fa-times {
+    color: #333333;
+  }
+  .font-types {
+    font-size: 0.9rem;
+  }
+  .fake-thead {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

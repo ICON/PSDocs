@@ -1,0 +1,26 @@
+.l-content-window {
+	overflow-y: auto;
+	width: 100%;
+	height: 460px;
+	padding-left: $content-window-padding;
+}
+
+// @media (max-device-width: 1024px) and (orientation: landscape) { 
+
+// 	.l-content-window {
+// 		overflow-x: hidden;
+// 		overflow-y: auto;
+// 		width: 900px;
+// 		height: 350px;
+// 	}
+
+// }
+
+// @media (max-device-width: 768px) and (orientation: portrait) { 
+
+// 	.l-content-window {
+// 		overflow-x: hidden;
+// 		overflow-y: auto;
+// 		width: 700px;
+// 	}
+// }

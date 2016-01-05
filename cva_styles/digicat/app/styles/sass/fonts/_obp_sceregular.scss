@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'obp_sceregular';
+  src: url('../fonts/obp_sceregular/obp_sce-webfont.eot');
+  src: url('../fonts/obp_sceregular/obp_sce-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/obp_sceregular/obp_sce-webfont.woff') format('woff'),
+       url('../fonts/obp_sceregular/obp_sce-webfont.ttf') format('truetype'),
+       url('../fonts/obp_sceregular/obp_sce-webfont.svg#obp_sceregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.obp_sceregular {
+  font-family: "obp_sceregular" !important;
+}

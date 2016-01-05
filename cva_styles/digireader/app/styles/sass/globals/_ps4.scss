@@ -1,0 +1,119 @@
+//ps4 specific overrides
+
+// digicat module overrides
+@import "digicatsass/modules/browser-overrides/ps4/variables";
+@import "digicatsass/modules/browser-overrides/ps4/globals/fullscreen";
+@import "digicatsass/modules/browser-overrides/ps4/globals/window";
+@import "digicatsass/modules/browser-overrides/ps4/top-bar/fullscreen";
+@import "digicatsass/modules/browser-overrides/ps4/states/window";
+$ps4-topbar: 9.5rem;
+@media only screen and (min-width:$ps4-fullscreen) {
+  .ps4 {
+    padding-top: 8.5rem;
+    font-style: normal !important;
+    overflow-y: scroll;
+    .logo {
+      height: 50px;
+    }
+    .top-bar {
+      height: $ps4-topbar !important;
+      .name h1 {
+        max-width: none;
+      }
+    }
+    .side-toc {
+      font-style: normal !important;
+      top: $ps4-topbar !important;
+      right: $safeAreaHDx;
+      bottom: $safeAreaHDy;
+      height: 85% !important;
+    }
+    .toc-scrollable-area {
+      height: 85% !important;
+      overflow: auto;
+    }
+
+    .container-content {
+      padding-top: 0 !important;
+    }
+    .chapter-header {
+      margin: 3.5rem 0 2rem;
+    }
+    .dropdown {
+      top: $ps4-topbar !important;
+    }
+
+    %icon-pagination {
+      width: inherit !important;
+      bottom: $safeAreaHDy !important;
+    }
+
+    .pagination.page-right {
+      right: 8rem;
+    }
+
+    .pagination.page-left {
+      left: 8rem;
+    }
+
+    // detail view
+    .detailbox {
+      padding: $safeAreaHDy $safeAreaHDy;
+    }
+    .detail-header {
+      padding: $safeAreaHDy $safeAreaHDx 1rem 0;
+    }
+    // search area
+    .search-results{
+      top: 210px;
+      padding-left: $safeAreaHDx;
+      padding-right: $safeAreaHDx;
+      padding-bottom: 250px;
+    }
+
+    .search-results-title {
+      padding-left: 4.5em;
+    }
+
+    .top-bar-center {
+      margin-left: $safeAreaHDx;
+    }
+    .warning-message h2 {
+      text-indent: -2.3rem !important;
+      margin-left: 5rem !important;
+    }
+  }
+}
+.ps4 {
+  // text enlargement for ps4
+  // .body-normal, .body-control dt, .body-control dd, .icon-small, .body-hyperlink {
+  //   font-size: $font-size-normal * 2;
+  // }
+  // .page-title, .body-head {
+  //   font-size: $font-size-large * 1.85;
+  // }
+  .body-control {
+    margin-bottom: 2rem !important;
+    font-size: 1.3rem;
+    line-height: 2.6rem;
+  }
+  .side-toc {
+    height: 95%;
+  }
+  .toc-scrollable-area {
+    height: 85%;
+  }
+  video {
+    max-height: 92%;
+  }
+  .tooltip-container {
+    font-size: $font-size-medium;
+  }  
+  .carousel-indicators {
+    display: none !important;
+  }
+  .warning-message h2 {
+    text-indent: -1.8rem;
+    margin-left: 4rem;
+  }
+}

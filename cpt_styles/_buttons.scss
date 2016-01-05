@@ -1,0 +1,207 @@
+.settings-tabs {
+  border-bottom: 1px solid $light-grey;
+  @include clearfix;
+  .btn.btn-tab {
+    @include border-radius(4px 4px 0 0);
+    background: $white;
+    color: $medium-grey;
+    font-size: 14px;
+    border: 1px $light-grey;
+    border-style: solid solid none;
+    * {
+      color: $medium-grey !important;
+    }
+    &:hover {
+      background-color: $light-grey;
+    }
+    &:active, &.active {
+      @include gradient($tab-grad-top, $tab-grad-bottom);
+      color: $white;
+      * {
+        color: $white !important;
+      }
+    }
+  }
+  &.align-left {
+    .btn {
+      margin: 0 0.5rem 0 0;
+    }
+  }
+  &.align-right {
+    .btn {
+      margin: 0 0 0 0.5rem;
+    }
+  }
+}
+// button bar
+.theme-actions {
+  @extend .clearfix;
+  background: $btn-container-background;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-top: 1px solid $light-grey;
+  vertical-align: middle;
+  p {
+    float: left;
+  }
+  a, button {
+    border: 0;
+  }
+  [class*="col-md"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.btn-group {
+  &.devices {
+    .btn {
+      width: 43px;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+  &.open {
+    .btn-info.dropdown-toggle {
+      background-color: $btn-info-grad-bottom;
+    }
+  }
+  &.metrics-filter {
+    display: block;
+    button {
+      float: none;
+      width: 100%;
+      text-align: left;
+      i {
+        @extend .pull-right;
+      }
+    }
+  }
+}
+.btn-container {
+  @extend .align-right;
+  .btn {
+    margin-left: 0.75rem;
+  }
+  > * {
+    display: inline-block;
+  }
+  .pull-left {
+    margin-left: 0 !important;
+  }
+  a {
+    color: $bodyText;
+  }
+}
+// overrides for all button types 
+.btn {
+  @include border-radius(2px);
+  &.btn-primary {
+    @include buttons($btn-primary-grad-top,$btn-primary-grad-bottom);
+  }
+  &.btn-info {
+    @include buttons($btn-info-grad-top,$btn-info-grad-bottom);
+  }
+  &.btn-success {
+    @include buttons($btn-success-grad-top,$btn-success-grad-bottom);
+  }
+  &.btn-warning {
+    @include buttons($btn-warning-grad-top,$btn-warning-grad-bottom);
+  }
+  &.btn-danger {
+    @include buttons($btn-danger-grad-top,$btn-danger-grad-bottom);
+  }
+  &.btn-inverse {
+    @include buttons($btn-inverse-grad-top,$btn-inverse-grad-bottom);
+  }
+  &.disabled, &[disabled] {
+    opacity: 0.25;
+  }
+  &:not(.btn-default) {
+    * {
+      color: $white;
+    }
+  }
+}
+.action-bar {
+  margin: 1rem 0;
+  button.action-buttons {
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    height: 40px;
+    display: inline-block;
+    color: $dark-blue;
+    font-weight: bold;
+    background: $light-blue;
+    border: 0;
+    text-transform: uppercase;
+    outline: none;
+    span:after {
+      content: '';
+      width: 0;
+      height: 0;
+      left: 100%;
+      bottom: 0;
+      position: absolute;
+      border-left: 16px solid $light-blue;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      z-index: 10;
+    }
+    &:hover {
+      color: $medium-blue;
+      background: $light-grey;
+      span:after {
+        border-left-color: $light-grey;
+      }
+    }
+    &:active, &.active {
+      color: $white;
+      background: $dark-blue;
+      span:after {
+        border-left-color: $dark-blue;
+      }
+    }
+    &:first-child {
+      padding-left: 15px;
+      @include border-radius(6px 0 0 6px);
+    }
+    &:last-child {
+      padding: 0 15px 0 23px;
+      @include border-radius(0 6px 6px 0);
+      span:after {
+        border-left: 0;
+        border-top: 0;
+        border-bottom: 0;
+      }
+    }
+    &:nth-child(2) {
+      padding: 0 5px 0 20px;
+    }
+    &:nth-child(2), &:last-child {
+      margin-left: 5px;
+      &:before {
+        content: '';
+        width: 0;
+        height: 0;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        border-left: 16px solid $white;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+      }
+    }
+  }
+}
+.select-buttons {
+  .btn {
+    margin-right: 0.6rem;
+  }
+}
+.thumbnail {
+  &.sortable{
+    cursor: move;
+  }
+}

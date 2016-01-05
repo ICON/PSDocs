@@ -1,0 +1,215 @@
+// Escape Plan custom CSS
+$bg-color: #f1f1f1;
+$font-color: #000;
+$red: #dd1a22;
+$border-img: url('https://cpt-assets.s3.amazonaws.com/projects/45/asset_styles/1043/style_img_border.png');
+@mixin border-image {
+  border-width: 15px;
+  -moz-border-image: $border-img 15 round;
+  -webkit-border-image: $border-img 15 round;
+  -o-border-image: $border-img 15 round;
+  border-image: $border-img 15 round;
+}
+body {
+  background:url('https://cpt-assets.s3.amazonaws.com/projects/45/asset_styles/1093/style_bg.jpg') fixed center top;
+  color: $font-color;
+}
+.content-main-container {
+  padding: 20px;
+  background: $bg-color;
+  height: auto !important;
+}
+.content-main {
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  border: 2px solid $font-color;
+  padding: 0 !important;
+  .container-page {
+    padding: 0 3em 3em;
+  }
+  .body-table td {
+    vertical-align: middle !important;
+  }
+}
+.chapter-header {
+  color: $red;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 1rem 0 1rem 3rem;
+}
+.body-control {
+  .obp_sceregular {
+    font-size: 1.75rem;
+  }
+  .body-control-title, .body-control-action {
+    max-width: none;
+  }
+}
+h3 {
+  color: $font-color;
+  font-size: 2em !important;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+h2 {
+  &.context-name {
+    color: white;
+  }
+  &.page-header {
+    display: none;
+  }
+}
+.modal-image-container img {
+  @include border-image;
+}
+.ch-1 {
+  .body-table {
+    width: 100%;
+    td {
+      img {
+        width: 100%;
+        max-width: inherit;
+      }
+      &:nth-child(1) {
+        width: 47%;
+      }
+      &:nth-child(2) {
+        width: 53%;
+      }
+    }
+  }
+  h3 {
+    margin-bottom: 1rem !important;
+  }
+}
+// making your escape page
+.ch-3 {
+  .body-table.ch-3-pg-1-table-2 {
+    width: 100%;
+    table {
+      margin: 0 !important;
+    }
+    td {
+      height: 50px;
+      padding: 0;
+      width: auto;
+      white-space: nowrap;
+      margin: 0 !important;
+      &.ch-3-pg-1-table-2-table-row-1-table-cell-1, &.ch-3-pg-1-table-2-table-row-1-table-cell-2, &.ch-3-pg-1-table-2-table-row-1-table-cell-3 {
+        min-width: 170px;
+        margin-right: 0.5rem !important;
+      } 
+      .body-image {
+        float: left;
+        margin-right: 10px;
+      }
+      p {
+        padding-top: 10px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.ch-6 {
+  font-size: 0.8em !important;
+}
+// TOC
+.side-toc {
+  background: rgba(0,0,0,0.45);
+  .toc-title {
+    margin-left: 80px !important;
+  }
+  .toc-scrollable-area {
+    margin-left: 0 !important;
+  }
+  .toc-item {
+    a {
+      font-size: 30px;
+      font-family: "sstbold";
+      font-weight: normal;
+      margin-left: 0;
+      padding: 0 0 0 85px;
+      color: #fff;
+      text-decoration: none;
+      &:hover, &:active, &.is-active {
+        color: $red !important;
+        background:url(https://cpt-assets.s3.amazonaws.com/projects/45/asset_styles/1042/style_arrow.png) no-repeat 0 0;
+      }
+    }
+  }
+}
+@media only screen and (max-width:1024px) {
+  .ch-4, .ch-3-pg-1-table-7 {
+    .body-table, &.body-table {
+      td:nth-child(1) {
+        width: 15% !important;
+      }
+      td:nth-child(2) {
+        width: 80% !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width:768px) {
+  .container-page {
+    padding: 0 1rem !important;
+  }
+  .chapter-header {
+    margin: 0 0 0 2rem !important;
+  }
+}
+@media only screen and (max-width:560px) {
+  .content-main {
+    border: 0 !important;
+  }
+  .chapter-header {
+    font-size: 40px !important;
+    margin-left: 1rem !important;
+  }
+  .pagination .ux-icon {
+    color: $font-color !important;
+  }
+  .ch-4, .ch-3 {
+    .body-table {
+      td {
+        display: inline-block !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width:480px) {  
+  .chapter-header {
+    font-size: 34px !important;
+    max-width: 400px !important;
+  }
+  .body-control-container {
+    border-bottom: 2px solid #898989;
+    margin: 0;
+    padding: 1em 0;
+    .body-control:after {
+      content: none;
+    }
+    dt, dd {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .ch-1-pg-1-table-1 {
+    td {
+      padding: 0 !important;
+    }
+  }
+  .ch-4, .ch-3-pg-1-table-7 {
+    .body-table, &.body-table {
+      td:nth-child(1) {
+        width: 25% !important;
+      }
+      td:nth-child(2) {
+        width: 70% !important;
+      }
+    }
+  }
+}
+
